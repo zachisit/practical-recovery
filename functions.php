@@ -45,10 +45,11 @@ function theme_scripts()
     //css
     wp_enqueue_style( 'theme-style', get_stylesheet_uri() );
     wp_enqueue_style( get_template_directory_uri() . 'main.scss' );
+    wp_enqueue_style( 'google_font_kreon', 'https://fonts.googleapis.com/css?family=Kreon:200,400,700,900');
 
     //js
     wp_enqueue_script( 'preload_directory', get_template_directory_uri() . '/js/preload_directory.js',  time() );
-    wp_enqueue_script( 'font-awesome', 'https://use.fontawesome.com/966d4a5f64.js', time() );
+    //wp_enqueue_script( 'font-awesome', 'https://use.fontawesome.com/966d4a5f64.js', time() );
     wp_enqueue_script( 'mobile-menu', get_template_directory_uri() . '/js/mobile_menu.js', time(), true );
     wp_enqueue_script( 'videoWrapper', get_template_directory_uri() . '/js/videoWrapper.js',  time() );
     wp_enqueue_script( 'smooth_scroll', get_template_directory_uri() . '/js/smooth_scroll.js',  time() );
@@ -182,4 +183,12 @@ function featured_image() {
     } else {
         return $tub;
     }
+
+    /*
+     * here is alternate option for display:
+     *
+     * <div id="page_header"<?php if ( has_post_thumbnail() ) {?>style="background-image:url(<?php the_post_thumbnail_url( 'full' ); ?>)"<?}?>>
+                <h1><?=the_title(); ?></h1>
+            </div>
+     */
 }

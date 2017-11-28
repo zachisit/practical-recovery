@@ -7,6 +7,7 @@
 get_header(); ?>
     <main>
         <div class="wrapper">
+            <?php featured_image() ?>
             <div id="content_left">
                 <?php while ( have_posts() ) : the_post();
                     echo the_title();
