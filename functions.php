@@ -189,6 +189,7 @@ function featured_image() {
 
     /*
      * here is alternate option for display:
+     * @TODO:move this into a new function for page header
      *
      * <div id="page_header"<?php if ( has_post_thumbnail() ) {?>style="background-image:url(<?php the_post_thumbnail_url( 'full' ); ?>)"<?}?>>
                 <h1><?=the_title(); ?></h1>

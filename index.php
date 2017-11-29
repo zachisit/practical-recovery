@@ -22,10 +22,43 @@ get_header(); ?>
     </div>
     <div id="latest_post_read_what">
         <div id="latest_post">
-            latest post here
+            <?php $args = [
+                'post_type' => 'post',
+                'post_status' => 'publish',
+                'posts_per_page' => 1,
+                'order' => 'DSC',
+                'category_name' => 'homepage'
+            ];
+
+            $the_query = new WP_Query( $args );
+
+            if ( $the_query->have_posts() ) :
+                while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                    <?=featured_image() ?>
+                    <div class="excerpt"><?=the_excerpt()?></div>
+                    <div class="readmore"><a href="<?=the_permalink()?>" title="<?=the_title(); ?>">read more</a></div>
+            <?php endwhile; endif; wp_reset_postdata()?>
         </div>
         <div id="read_what">
             <h2>Read what people are saying about us</h2>
+            <div id="testimonials_container">
+                <ul id="testimonials_slider">
+                    <?php $query = new WP_Query( ['post_type' => 'testimonials', 'posts_per_page' => -1 ] );
+                    foreach($query->get_posts() as $testimonial):
+                        $meta = get_post_meta($testimonial->ID);
+                        foreach($meta as &$m){
+                            if(is_array($m)){
+                                $m = $m[0];
+                            }
+                        } ?>
+                        <li>
+                            <div class="content"><p><?=do_shortcode($testimonial->post_content) ?></p></div>
+                            <div class="author">- <?=$meta['_testimonial_person_name'] ?> <?php if ($meta['_testimonial_company_name']){?><span class="company_name">/ <?=$meta['_testimonial_company_name'] ?></span><?}?></div>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+                <div class="link"><a href="<?=home_url('/testimonials'); ?>" title="View All Testimonials">View More</a></div>
+            </div>
             <ul>
                 <li>
                     <div class="testimonial">testimonial content</div>
