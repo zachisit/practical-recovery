@@ -59,12 +59,6 @@ get_header(); ?>
                 </ul>
                 <div class="link"><a href="<?=home_url('/testimonials'); ?>" title="View All Testimonials">View More</a></div>
             </div>
-            <ul>
-                <li>
-                    <div class="testimonial">testimonial content</div>
-                    <div class="testimonial_name">-Dave</div>
-                </li>
-            </ul>
         </div>
     </div>
     <div id="parallax">

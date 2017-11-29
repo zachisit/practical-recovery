@@ -6,7 +6,7 @@
  */
 get_header(); ?>
     <main>
-        <?php featured_image() ?>
+        <?php pageBannerImage() ?>
         <div class="wrapper">
             <?php get_sidebar(); ?>
             <div id="content_right">
