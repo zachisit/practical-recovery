@@ -6,15 +6,14 @@
  */
 get_header(); ?>
     <main>
+        <?php featured_image() ?>
         <div class="wrapper">
-            <?php featured_image() ?>
-            <div id="content_left">
+            <?php get_sidebar(); ?>
+            <div id="content_right">
                 <?php while ( have_posts() ) : the_post();
-                    echo the_title();
                     echo the_content();
                 endwhile; ?>
             </div>
-            <?php get_sidebar(); ?>
         </div>
     </main>
 <?php get_footer(); ?>
