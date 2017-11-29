@@ -17,7 +17,7 @@
 ## Dependencies
 * SASS - theme uses SASS compiler for all stylesheets used in theme. Normal .css files will be found in the theme so user can put normal css declarations without editing the sass file if needed.
 * In-house templating engine, found in functions.php
- * @TODO
+ * [Lightbox2](http://lokeshdhakar.com/projects/lightbox2/) for lightbox modals on frontend
 
 ## Theme Custom Post Types
 * @TODO
