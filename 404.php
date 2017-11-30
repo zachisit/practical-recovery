@@ -5,7 +5,9 @@
  * This is the template that displays generic 404 message
  *
  */
-get_header(); ?>
+get_header();
+
+four_oh_four_alert(); ?>
 
     <main>
         <div id="page_content">
