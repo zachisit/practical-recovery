@@ -1,5 +1,8 @@
 <footer>
     <div id="top">
+        <div id="top_flower">
+            <img src="<?=get_template_directory_uri(); ?>/images/preload/footer-flower.jpg.png" alt="flower icon" />
+        </div>
         <div id="left">
             <h2>Download Our Brochure of Addiction Treatment Services</h2>
         </div>
@@ -19,7 +22,7 @@
         </div>
     </div>
     <div id="bottom">
-        <p>&copy; <?php echo date("Y"); ?> <?php echo get_bloginfo( 'name' ); ?></p>
+        <p>&copy; <?php echo date("Y"); ?> <?=get_bloginfo( 'name' ); ?></p>
         <ul>
             <li><a href="" title="Privacy Policy">Privacy Policy</a></li>
             <li><a href="" title="Disclaimers">Disclaimers</a></li>
