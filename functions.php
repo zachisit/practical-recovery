@@ -7,6 +7,7 @@
 
 require_once "shortcodes/sitemap.php";
 require_once "post-type/testimonials.php";
+require_once "post-type/team.php";
 
 /**
  * Widgetize Theme

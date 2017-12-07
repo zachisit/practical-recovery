@@ -66,8 +66,7 @@ function pr_testimonial_save_meta($post_id, $post) {
         return $post->ID;
 
     //save data
-    $testimonial_block_meta['_testimonial_company_name'] = $_POST['_testimonial_company_name'];
-    $testimonial_block_meta['_testimonial_person_name'] = $_POST['_testimonial_person_name'];
+    $testimonial_block_meta['_testimonial_person_tagline'] = $_POST['_testimonial_person_tagline'];
 
     //add values of $testimonial_block_meta as custom fields
     foreach ($testimonial_block_meta as $key => $value) {
@@ -86,11 +85,7 @@ add_action('save_post', 'pr_testimonial_save_meta', 1, 2);
 
 //set up new column to show custom meta theme_color
 function pr_testimonials_column($column) {
-    //check if column exists, otherwise create
-    if ( !isset ($column['testimonial_company_name']) ) {
-        $column['testimonial_company_name'] = 'Company Name';
-        $column['testimonial_person_name'] = 'Person Name';
-    }
+    $column['testimonial_person_tagline'] = 'Person Tagline';
 
     return $column;
 }
@@ -101,12 +96,9 @@ add_filter('manage_testimonials_posts_columns', 'pr_testimonials_column');
 function pr_show_testimonials_column($name) {
     global $post;
     switch ($name) {
-        case 'testimonial_company_name':
-            $testimonial_company_name = get_post_meta($post->ID, '_testimonial_company_name', true);
-            echo $testimonial_company_name;
-        case 'testimonial_person_name':
-            $testimonial_person_name = get_post_meta($post->ID, '_testimonial_person_name', true);
-            echo $testimonial_person_name;
+        case 'testimonial_person_tagline':
+            $testimonial_person_tagline = get_post_meta($post->ID, '_testimonial_person_tagline', true);
+            echo $testimonial_person_tagline;
     }
 }
 
