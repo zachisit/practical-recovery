@@ -6,6 +6,7 @@
  */
 
 require_once "shortcodes/sitemap.php";
+require_once "shortcodes/team_member_list.php";
 require_once "post-type/testimonials.php";
 require_once "post-type/team.php";
 

@@ -110,13 +110,34 @@ function pr_show_team_member_column($name) {
         case 'team_member_job_title':
             $team_member_job_title = get_post_meta($post->ID, '_team_member_job_title', true);
             echo $team_member_job_title;
+            break;
         case 'team_member_contact_number':
             $team_member_contact_number = get_post_meta($post->ID, '_team_member_contact_number', true);
             echo $team_member_contact_number;
+            break;
         case 'team_member_email':
             $team_member_email = get_post_meta($post->ID, '_team_member_email', true);
             echo $team_member_email;
+            break;
     }
 }
 
 add_action('manage_team_member_posts_custom_column',  'pr_show_team_member_column');
+
+//create taxonomy for team
+function pr_team_taxonomies()
+{
+    register_taxonomy('team_cat',
+        ['team_member'],
+        [
+            'hierarchical' => true,
+            'show_ui' => true,
+            'show_admin_column' => true,
+            'query_var' => true,
+            'label' => 'Team Member Categories',
+            'rewrite' => true
+        ]
+    );
+}
+
+add_action( 'init', 'pr_team_taxonomies', 0 );
