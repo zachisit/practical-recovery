@@ -47,7 +47,6 @@ function theme_scripts()
 
     //css
     wp_enqueue_style( 'theme-style', get_stylesheet_uri() );
-    wp_enqueue_style( get_template_directory_uri() . 'main.scss' );
     wp_enqueue_style( 'google_font_kreon', 'https://fonts.googleapis.com/css?family=Kreon:200,400,700,900');
     wp_enqueue_style('lightbox_css', 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css');
 
@@ -134,7 +133,7 @@ function populate_template_file($templateFile, $args = [])
  * preload entire dir
  * @return: json encoded string
  */
-function XXX_theme_preload_dir() {
+function pr_theme_preload_dir() {
     header( 'Content-type: application/json' );
 
     $filenameArray = [];
@@ -153,8 +152,8 @@ function XXX_theme_preload_dir() {
     wp_die();//need to do at end of ajax calls to stop
 }
 
-add_action('wp_ajax_preload_images_directory', 'XXX_theme_preload_dir');
-add_action('wp_ajax_nopriv_preload_images_directory', 'XXX_theme_preload_dir');
+add_action('wp_ajax_preload_images_directory', 'pr_theme_preload_dir');
+add_action('wp_ajax_nopriv_preload_images_directory', 'pr_theme_preload_dir');
 
 /**
  * Convert Normal YouTube link into embed code
