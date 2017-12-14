@@ -47,7 +47,7 @@ function theme_scripts()
 
     //css
     wp_enqueue_style( 'theme-style', get_stylesheet_uri() );
-    wp_enqueue_style( 'google_font_kreon', 'https://fonts.googleapis.com/css?family=Kreon:200,400,700,900');
+    wp_enqueue_style( 'google_font_kreon', 'https://fonts.googleapis.com/css?family=Kreon:300,400,700');
     wp_enqueue_style('lightbox_css', 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css');
 
     //js
@@ -343,4 +343,17 @@ function checkPluginsRequired() {
 
         echo '</div>';
     }
+}
+
+/**
+ * Return Page content per ID passed in
+ * @param $page
+ * @return mixed
+ */
+function get_page_content($page) {
+    $page_id = $page;
+    $page_data = get_page( $page_id );
+    $content = apply_filters('the_content', $page_data->post_content);
+
+    return $content;
 }

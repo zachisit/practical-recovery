@@ -26,6 +26,8 @@
 # Client Brand Colors
 --------------------------------------------------------------*/
 //colors here
+$brand_color_blue:#4ea0d4;
+$brand_color_green:#71a600;
 $error_red:#FF7878;
 
 /*--------------------------------------------------------------
@@ -171,10 +173,13 @@ a {
     }
   }
 
-.bold {
+.bold, .strong {
     font-weight:900;
   }
-
+.textblock {
+  float:left;
+  width:100%;
+}
 .telephone_link {
     font-weight:normal;
     color:white;
@@ -194,6 +199,8 @@ a {
 --------------------------------------------------------------*/
 header {
   display:block;
+  float:left;
+  width:100%;
 
   #logo {
     float:left;
@@ -371,7 +378,36 @@ header {
 #home {
 
   #banner_image {
+    float:left;
+    width:100%;
+    height:400px;
+    position:relative;
+    margin:4em 0 3em 0;
 
+    .cta_block {
+      position:absolute;
+      bottom:35%;
+      margin:auto;
+      left:0;
+      right:0;
+      width:50%;
+      border:0.4em solid white;
+
+      &:hover {
+        background:rgba(255,255,255,0);
+        @include transition(background 100ms ease); //@TODO:fix this to work
+      }
+
+      h1 {
+        font-size:2em;
+        color:white;
+        font-weight:100;
+        text-align:center;
+        margin:1em 0;
+        padding:0;
+        font-family: 'Kreon', serif
+      }
+    }
   }
 
   #home_content {
@@ -379,31 +415,93 @@ header {
   }
 
   #latest_post_read_what {
-
+    float:left;
+    width:100%;
+    height:400px;
+    position:relative;
+    margin:4em 0 3em 0;
   }
 
   #parallax {
+    float:left;
+    width:100%;
+    height:500px;
+    position:relative;
 
+    #container {
+
+      .phone_icon {
+
+      }
+
+      .phone_number {
+
+      }
+
+      #empower {
+
+      }
+
+      #cta {
+
+      }
+
+      #email {
+
+      }
+    }
   }
 
   #contact {
+    width:100%;
+    float:left;
 
+    #green {
+      float:left;
+      width:50%;
+      background:$brand_color_green;
+    }
+
+    #blue {
+      background:$brand_color_blue;
+      width:50%;
+      float:right;
+    }
   }
 
   #press {
+    float:left;
+    width:100%;
 
   }
 
   #additions_we_treat {
+    float:left;
+    width:100%;
 
   }
 }
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
 #content_left {
   float:left;
   width:60%;
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'Kreon', serif
+  }
+
+  h1 {
+    color:$brand_color_blue;
+  }
+
+  p {
+    font-family:'Helvetica', sans-serif;
+    font-size:1em;
+    line-height:1.4em;
+  }
 }
 #content_right {
   float:right;
@@ -539,8 +637,9 @@ video {
 # Footer
 --------------------------------------------------------------*/
 footer {
-    float:left;
-    width:100%;
-    padding:1.510em 0 0 0;
-    margin:0;
+  float:left;
+  width:100%;
+  padding:1.510em 0 0 0;
+  margin:0;
+  background:$brand_color_blue;
   }
