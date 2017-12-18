@@ -109,6 +109,11 @@ $medium_desktop_size:"only screen and (min-width:881px) and (max-width:1300px)";
     @content;
   }
 }
+@mixin border-radius($border) {
+  -webkit-border-radius:$border;
+  -moz-border-radius:$border;
+  border-radius:$border;
+}
 
 
 /*--------------------------------------------------------------
@@ -172,6 +177,37 @@ a {
       background:orange;/*TODO:change later*/;
     }
   }
+
+.large_button {
+  background:$brand_color_green;
+  @include border-radius(0.5em);
+  border:0.31em solid white;
+  padding:0.4em 0.8em;
+  color:white;
+  text-decoration:none;
+
+  &:hover {
+    background:white;
+    color:$brand_color_green;
+    @include transition(background 500ms ease);
+  }
+
+  &.pdf {
+
+    &::after {
+      content:"\f1c1";
+      font-family:"FontAwesome";
+      font-size:1em;
+      color:white;
+      margin:0 0 0 1em;
+
+      &:hover {
+        color:$brand_color_green;
+        @include transition(color 500ms ease);
+      }
+    }
+  }
+}
 
 .bold, .strong {
     font-weight:900;
@@ -377,6 +413,16 @@ header {
 --------------------------------------------------------------*/
 #home {
 
+  .section_headline {
+    font-family:'Kreon',serif;
+    font-weight:700;
+    font-size:1.5em;
+    text-align:left;
+    margin:0;
+    padding:0;
+    color:$brand_color_blue;
+  }
+
   #banner_image {
     float:left;
     width:100%;
@@ -472,13 +518,54 @@ header {
   #press {
     float:left;
     width:100%;
+    padding:2em 0;
+    border-top:0.01em solid #ccc;
+    border-bottom:0.01em solid #ccc;
 
+    ul {
+      @include ul-list-style-no-type;
+      margin:1em 0 0 0;
+
+      li {
+        display:inline-block;
+        margin:0 4em 0 0;
+        @include ul-li-last-item-no-margin;
+      }
+    }
   }
 
   #additions_we_treat {
     float:left;
     width:100%;
+    padding:2em 0;
 
+    ul {
+      @include ul-list-style-no-type;
+
+      li {
+        display:block;
+        margin:0 0 0.8em 0;
+
+        a {
+          font-size:1em;
+          color:#818182;
+          text-align:center;
+        }
+      }
+    }
+
+    #one {
+      float:left;
+    }
+
+    #two {
+      float:left;
+      margin:0 1em;
+    }
+
+    #three {
+      float:right;
+    }
   }
 }
 
@@ -639,7 +726,100 @@ video {
 footer {
   float:left;
   width:100%;
-  padding:1.510em 0 0 0;
   margin:0;
-  background:$brand_color_blue;
+  background:#565656;
+
+  #footer_flower {
+    margin:-20px auto 0 auto;
+    width:20px;
+    background:url(../images/preload/footer-flower.jpg) no-repeat;
   }
+
+  #top {
+    float:left;
+    width:100%;
+    margin:1em 0 2em 0;
+
+    h2 {
+      color:white;
+      font-size:1.1em;
+      font-weight:700;
+      margin:0 0 0.3em 0;
+      font-family:'Kreon',serif;
+    }
+
+    #left {
+      float:left;
+      width:40%;
+    }
+
+    #right {
+      float:right;
+      width:40%;
+    }
+  }
+
+  #menus {
+    @include ul-list-style-no-type;
+    float:left;
+    width:100%;
+    margin:1em 0;
+
+    h3 {
+      color:white;
+      font-size:1em;
+      text-transform:uppercase;
+      font-family:'Kreon',serif;
+    }
+
+    li {
+      display:block;
+      margin:0 0 0.4em 0;
+
+      a {
+        color:white;
+      }
+    }
+
+    #one {
+      float:left;
+      width:20%;
+    }
+
+    #two {
+      float:left;
+      width:20%;
+      margin:0 1em;
+    }
+
+    #three {
+      float:left;
+    }
+  }
+
+  #bottom {
+    background:$brand_color_blue;
+    font-size:0.8em;
+    padding:1em 0;
+    float:left;
+    width:100%;
+    color:white;
+
+    p {
+      text-align:left;
+    }
+
+    ul {
+      @include ul-list-style-no-type;
+
+      li {
+        display:inline-block;
+
+        a {
+          color:white;
+          text-decoration:underline;
+        }
+      }
+    }
+  }
+}

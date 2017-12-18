@@ -97,7 +97,7 @@ get_header(); ?>
         </div>
         <div id="press">
             <div class="wrapper">
-                <h2>Visit Our Press Page</h2>
+                <h2 class="section_headline">Visit Our Press Page</h2>
                 <ul>
                     <li><img src="<?=get_template_directory_uri(); ?>/images/preload/discovery_img.png" alt="<?=get_bloginfo( 'name' ); ?> - Press: Discovery News" /></li>
                     <li><img src="<?=get_template_directory_uri(); ?>/images/preload/the_fix_img.png" alt="<?=get_bloginfo( 'name' ); ?> - Press: The Fix" /></li>
@@ -111,7 +111,7 @@ get_header(); ?>
         </div>
         <div id="additions_we_treat">
             <div class="wrapper small">
-                <h2>Additions We Treat</h2>
+                <h2 class="section_headline">Additions We Treat</h2>
                 <div id="one">
                     <ul>
                         <li><a href="" title="Alcohol Addiction">Alcohol Addiction</a></li>
