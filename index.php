@@ -10,7 +10,8 @@ get_header(); ?>
 
 <main id="home">
     <!--/wp-content/uploads/2017/12/home-parallax.jpg-->
-    <div id="banner_image" style="background:url(https://images.unsplash.com/photo-1443981257024-40c63080b3ed?auto=format&fit=crop&w=2048&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D) no-repeat;background-attachment:fixed;">
+    <!--<div id="banner_image" style="background:url(https://images.unsplash.com/photo-1443981257024-40c63080b3ed?auto=format&fit=crop&w=2048&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D) no-repeat;background-attachment:fixed;">-->
+    <div id="banner_image" style="background:url(<?=get_template_directory_uri(); ?>/images/preload/home_splash_banner.jpg) no-repeat;background-attachment:fixed;">
         <div class="cta_block"><h1>San Diego's Source For Drug Rehab and Alcohol Treatment Since 1985</h1></div>
     </div>
     <div id="home_content">
@@ -19,7 +20,7 @@ get_header(); ?>
                 <?=get_page_content('4')?>
             </div>
             <div id="sidebar">
-                <a href="" title=""><img src="<?=get_template_directory_uri(); ?>/images/preload/My-addiction-recovery-story.jpg" alt="<?=get_bloginfo( 'name' ); ?> - Home" /></a>
+                <a href="" title=""><img src="<?=get_template_directory_uri(); ?>/images/preload/My-addiction-recovery-story.jpg" alt="<?=get_bloginfo( 'name' )?> - Home" /></a>
             </div>
         </div>
         <div id="latest_post_read_what">
