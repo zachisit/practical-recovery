@@ -484,8 +484,8 @@ header {
       .date {
         font-size:0.8em;
         font-style:italic;
-        margin:0.3em 0 0.8em;
-        padding:0 0 0 0.8em;
+        margin:0.3em 0 0;
+        padding:0 0 0 2em;
       }
 
       img {
@@ -503,7 +503,7 @@ header {
         margin:0 1em 1em 0;
 
         p {
-          font-size:0.9em;
+          font-size:1.1em;
           line-height:1.3em;
         }
       }
@@ -520,6 +520,56 @@ header {
     #read_what {
       float:right;
       width:49%;
+
+      h2 {
+        color:$brand_color_green;
+        font-size:1.6em;
+        margin:0 0 1em 0;
+        padding:0;
+      }
+
+      #testimonials_slider {
+        @include ul-list-style-no-type;
+        max-height:335px;
+        min-height:335px;
+        float:left;
+        width:100%;
+        display:block;
+
+        li {
+          font-size:1.5em;
+          line-height:1.5em;
+          color:$brand_color_blue;
+          font-weight:100;
+
+          .after_quote {
+            background:url(images/preload/testimonial-quotes-after.png) no-repeat;
+            float:left;
+            width:100%;
+
+            .author {
+              background:$brand_color_green;
+              color:white;
+              font-size:0.7em;
+              padding:0.5em 2em 0.5em 0.5em;
+              float:left;
+              width:auto;
+              margin:1.7em 0 0 0;
+              -moz-border-radius-bottomleft:0.3em;
+              -webkit-border-bottom-left-radius:0.3em;
+              border-bottom-left-radius:0.3em;
+              -moz-border-radius-bottomright:0.3em;
+              -webkit-border-bottom-right-radius:0.3em;
+              border-bottom-right-radius:0.3em;
+            }
+          }
+
+        }
+
+        .slick-dots {
+          margin:1em 0 0 0;
+        }
+      }
     }
   }
 

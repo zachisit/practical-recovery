@@ -29,6 +29,7 @@ get_header(); ?>
                 </div>
                 <div id="read_what">
                     <h2>Read what people are saying about us</h2>
+                    <img src="<?=get_template_directory_uri(); ?>/images/preload/testimonial-quotes-before.png" alt="<?=get_bloginfo( 'name' ); ?> - <?=get_home_url(); ?> Logo" aria-hidden="true" />
                     <div id="testimonials_container">
                         <ul id="testimonials_slider">
                             <?php $query = new WP_Query( ['post_type' => 'testimonials', 'posts_per_page' => -1 ] );
@@ -40,12 +41,13 @@ get_header(); ?>
                                     }
                                 } ?>
                                 <li>
-                                    <div class="content"><p><?=do_shortcode($testimonial->post_content) ?></p></div>
-                                    <div class="author">- <?=$meta['_testimonial_person_name'] ?> <?php if ($meta['_testimonial_company_name']){?><span class="company_name">/ <?=$meta['_testimonial_company_name'] ?></span><?}?></div>
+                                    <div class="content"><p><?=do_shortcode(mb_strimwidth($testimonial->post_content, 0, 280, '...')) ?></p></div>
+                                    <div class="after_quote">
+                                        <div class="author"> <?=$meta['_testimonial_person_tagline'] ?></div>
+                                    </div>
                                 </li>
                             <?php endforeach; ?>
                         </ul>
-                        <div class="link"><a href="<?=home_url('/testimonials'); ?>" title="View All Testimonials">View More</a></div>
                     </div>
                 </div>
             </div>
