@@ -237,30 +237,82 @@ header {
   display:block;
   float:left;
   width:100%;
+  background:white;
+  box-shadow:0 2px 10px #333;
+  padding:0 0 0.8em 0;
+  margin:0 0 0.2em 0;
 
   #logo {
     float:left;
-
+    margin:2em 0 0 0;
     @include image_responsive;
   }
 
   #top {
     float:right;
+    width:53%;
+    margin:0 0 1em 0;
 
     #call_us {
       float:left;
+
+      p {
+        color:$brand_color_blue;
+        font-size:1.1em;
+        margin:1.5em 0 0 0;
+
+        a {
+          color:$brand_color_blue;
+          text-decoration:none;
+          font-weight:normal;
+
+          &:hover {
+            color:$brand_color_green;
+            @include transition(color 500ms ease);
+          }
+        }
+
+        &::before {
+          content:"\f098";
+          font-family:"FontAwesome";
+          font-size:1.3em;
+          color:$brand_color_blue;
+          margin:0 0.2em 0 0;
+        }
+
+        &:hover {
+
+          &::before {
+            color:$brand_color_green;
+            @include transition(color 500ms ease);
+          }
+        }
+      }
     }
 
     #social {
       float:left;
+      margin:0 0 0 4em;
 
       ul {
         @include ul-list-style-no-type;
+        margin:1.2em 0 0 0;
 
         li {
           float:left;
-
+          margin:0 0.56em 0 0;
           @include ul-li-last-item-no-margin;
+
+          a {
+            color:$brand_color_blue;
+            font-weight:900;
+            font-size:1.666em;
+
+            &:hover {
+              color:$brand_color_green;
+              @include transition(color 500ms ease);
+            }
+          }
         }
       }
     }
@@ -268,6 +320,14 @@ header {
     #search {
       float:right;
     }
+  }
+
+  &.fixed-header {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:99999999;
   }
 }
 
@@ -323,8 +383,8 @@ header {
   }
 
 #menu {
-    float:left;
-    width:auto;
+    float:right;
+    width:70%;
     clear:both;
     margin:-1em 0 0 0;//@TODO:not most elegant;fix later
 
@@ -339,19 +399,30 @@ header {
     }
 
     .menu {
-      //@include ul-no-list-style;@TODO:create mixin later
 
       li {
         display:inline-block;
-        margin:0 1.3em 0 0;
+        margin:0 1em 0 0;
         position:relative;
+        @include ul-li-last-item-no-margin;
 
         a {
           font-size:1em;
-          color:gray;/*TODO:change later*/;
-        }
+          text-transform:uppercase;
+          font-family:'Kreon', sans-serif;
+          color:#3d3d3d;
 
-        //@include ul-li-last-item-no-pad;@TODO:create mixin later
+          &::after {
+            content:'/';
+            color:#3d3d3d;
+            margin:0 0 0 1em;
+          }
+
+          &:hover {
+            color:$brand_color_blue;
+            @include transition(color 400ms ease);
+          }
+        }
 
         &:hover {
 
@@ -359,12 +430,19 @@ header {
             display:block;
           }
         }
+
+        &.current_page_item {
+
+          a {
+            color:$brand_color_blue;
+          }
+        }
       }
 
       .sub-menu {
         display:none;
         position:absolute;
-        background:#096cc8;
+        background:$brand_color_blue;
         border:1px solid #ccc;
         padding:0;
         width:200px;
@@ -395,12 +473,16 @@ header {
             margin:0;
           }
 
+          &:hover {
+            background:$brand_color_green;
+            @include transition(background 1400ms ease);
+          }
+
           a {
             color:white;
 
-            &:hover {
-              text-decoration:none;
-              color:black;
+            &::after {
+              display:none;
             }
           }
         }
@@ -428,7 +510,7 @@ header {
     width:100%;
     height:400px;
     position:relative;
-    margin:4em 0 3em 0;
+    margin:0 0 1em 0;
 
     .cta_block {
       position:absolute;
@@ -536,6 +618,7 @@ header {
         min-height:335px;
         float:left;
         width:100%;
+        overflow:hidden;
         display:block;
 
         li {
@@ -803,11 +886,11 @@ video {
 
     #scroll {
       width:50px;
-      height:50px;
+      height:44px;
       float:right;
       position:relative;
       right:7.5%;
-      margin:0 0 1.250em 0;
+      margin:-4em 0 1.25em 0;
 
       @media #{$mobile_phone_size} {
         right:1%;
@@ -818,14 +901,13 @@ video {
       }
 
       a {
-        background:orange;/*TODO:change later*/;
         width:100%;
         height:100%;
         float:right;
+        text-align:center;
         text-decoration:none;
-        -webkit-border-radius:0.273em;
-        -moz-border-radius:0.273em;
-        border-radius:0.273em;
+        border:0.4em solid white;
+        @include border-radius(0.5em);
 
         &::after {
           content:"\f0d8";
@@ -834,13 +916,12 @@ video {
           color:white;
           text-align:center;
           font-weight:100;
-          float:left;
-          margin:0.035em 0 0 0.250em;
+          margin:auto;
         }
 
         &:hover {
-          transition:background 0.7s ease;
-          background:orange;/*TODO:change later*/;
+          @include transition(background 800ms ease);
+          background:$brand_color_green;
         }
       }
     }

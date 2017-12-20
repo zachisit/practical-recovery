@@ -36,7 +36,7 @@
 </head>
 <body>
 
-<header>
+<header class="">
     <div class="wrapper">
         <div id="logo">
             <a href="<?=get_home_url(); ?>" title="<?=get_home_url(); ?> Home"><img src="<?=get_template_directory_uri(); ?>/images/preload/logo1.png" alt="<?=get_bloginfo( 'name' ); ?> - <?=get_home_url(); ?> Logo" /></a>
@@ -48,11 +48,11 @@
             </div>
             <div id="social">
                 <ul>
-                    <li><a href="https://www.practicalrecovery.com/wp-content/uploads/2015/04/fb-head.png" title="<?=get_bloginfo( 'name' ); ?> - Facebook" target="_blank"><img src="<?=get_template_directory_uri(); ?>/images/preload/fb-head.png" alt="<?=get_bloginfo( 'name' ); ?> - Facebook" /></a></li>
-                    <li><a href="https://twitter.com/PracticalRecov" title="<?=get_bloginfo( 'name' ); ?> - Twitter" target="_blank"><img src="<?=get_template_directory_uri(); ?>/images/preload/twitter-head.png" alt="<?=get_bloginfo( 'name' ); ?> - Twitter" /></a></li>
-                    <li><a href="http://pinterest.com/practicalrecov/" title="<?=get_bloginfo( 'name' ); ?> - Pinterest" target="_blank"><img src="<?=get_template_directory_uri(); ?>/images/preload/pinit-head.png" alt="<?=get_bloginfo( 'name' ); ?> - Pinterest" /></a></li>
-                    <li><a href="http://instagram.com/practicalrecoverysd" title="<?=get_bloginfo( 'name' ); ?> - Instagram" target="_blank"><img src="<?=get_template_directory_uri(); ?>/images/preload/instagram-head.png" alt="<?=get_bloginfo( 'name' ); ?> - Instagram" /></a></li>
-                    <li><a href="http://www.youtube.com/user/PracticalRecoveryInc/feed" title="<?=get_bloginfo( 'name' ); ?> - YouTube" target="_blank"><img src="<?=get_template_directory_uri(); ?>/images/preload/youtube-head.png" alt="<?=get_bloginfo( 'name' ); ?> - YouTube" /></a></li>
+                    <li><a href="https://www.practicalrecovery.com/wp-content/uploads/2015/04/fb-head.png" title="<?=get_bloginfo( 'name' ); ?> - Facebook" target="_blank"><!--<img src="<?=get_template_directory_uri(); ?>/images/preload/fb-head.png" alt="<?=get_bloginfo( 'name' ); ?> - Facebook" /></a>--><i class="fa fa-facebook-official" aria-hidden="true"></i></li>
+                    <li><a href="https://twitter.com/PracticalRecov" title="<?=get_bloginfo( 'name' ); ?> - Twitter" target="_blank"><!--<img src="<?=get_template_directory_uri(); ?>/images/preload/twitter-head.png" alt="<?=get_bloginfo( 'name' ); ?> - Twitter" />--><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                    <li><a href="http://pinterest.com/practicalrecov/" title="<?=get_bloginfo( 'name' ); ?> - Pinterest" target="_blank"><!--<img src="<?=get_template_directory_uri(); ?>/images/preload/pinit-head.png" alt="<?=get_bloginfo( 'name' ); ?> - Pinterest" />--><i class="fa fa-pinterest-square" aria-hidden="true"></i></a></li>
+                    <li><a href="http://instagram.com/practicalrecoverysd" title="<?=get_bloginfo( 'name' ); ?> - Instagram" target="_blank"><!--<img src="<?=get_template_directory_uri(); ?>/images/preload/instagram-head.png" alt="<?=get_bloginfo( 'name' ); ?> - Instagram" />--><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="http://www.youtube.com/user/PracticalRecoveryInc/feed" title="<?=get_bloginfo( 'name' ); ?> - YouTube" target="_blank"><!--<img src="<?=get_template_directory_uri(); ?>/images/preload/youtube-head.png" alt="<?=get_bloginfo( 'name' ); ?> - YouTube" />--><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
             <div id="search">
@@ -68,3 +68,4 @@
         </div>
     </div>
 </header>
+<div id="site_top"></div>

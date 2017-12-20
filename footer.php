@@ -37,6 +37,11 @@
                 <li><a href="" title="Disclaimers">Disclaimers</a></li>
             </ul>
         </div>
+        <div id="scroll_top">
+            <div id="scroll">
+                <a href="#site_top" title="scroll to top of page"></a>
+            </div>
+        </div>
     </div>
 </footer>
 <?php wp_footer(); ?>
