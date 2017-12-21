@@ -55,11 +55,11 @@ get_header(); ?>
         </div>
         <div id="parallax" style="background:url(/wp-content/themes/practical-recovery-twentyeightteen/images/preload/empower.jpg) no-repeat;background-attachment:fixed">
             <div id="container">
-                <div class="phone_icon"><img src="<?=get_template_directory_uri(); ?>/images/preload/cta-phone.png" alt="<?=get_bloginfo( 'name' ); ?> - Call Us 1-800-977-6110" /></div>
+                <div class="phone_icon"><!--<img src="<?=get_template_directory_uri(); ?>/images/preload/cta-phone.png" alt="<?=get_bloginfo( 'name' ); ?> - Call Us 1-800-977-6110" />--><i class="fa fa-phone-square" aria-hidden="true"></i></div>
                 <div class="phone_number"><a href="tel:1-800-977-6110">(800) 977-6110</a></div>
                 <div id="empower">Empower yourself. Call now.</div>
                 <div id="cta">Phone answered 7 days a week | No obligation | Completely confidential</div>
-                <div id="email"><a href="" title="email us">Email Us</a></div>
+                <div id="email"><a href="" title="email us" class="large_button">Email Us</a></div>
             </div>
         </div>
         <div id="contact">
