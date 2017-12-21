@@ -716,6 +716,18 @@ header {
       float:left;
       width:50%;
       background:$brand_color_green;
+
+      .textblock {
+        margin:0 0 1em 0;
+        text-align:right;
+        color:white;
+
+        p {
+          margin:0 0 0.3em 0;
+          padding:0 2em 0 0;
+          font-size:1em;
+        }
+      }
     }
 
     #blue {
