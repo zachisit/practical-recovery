@@ -22,11 +22,6 @@ get_header(); ?>
             <div id="sidebar">
                 <a href="https://fast.wistia.net/embed/iframe/w78666dkc1?popover=true?TB_iframe=true" class="thickbox"><img src="<?=get_template_directory_uri(); ?>/images/preload/My-addiction-recovery-story.jpg" alt="<?=get_bloginfo( 'name' )?> - Home" /></a>
             </div>
-            <div id="my-content-id" style="display:none;">
-                <p>
-                    This is my hidden content! It will appear in ThickBox when the link is clicked.
-                </p>
-            </div>
         </div>
         <div id="latest_post_read_what">
             <div class="wrapper">
@@ -83,11 +78,12 @@ get_header(); ?>
                     <p><span class="italic">Intake:</span> (800) 977-6110</p>
                 </div>
                 <div class="textblock">
-                    <p><a href="mailto:INFO@PRACTICALRECOVERY.COM">INFO@PRACTICALRECOVERY.COM</a></p>
+                    <p><a href="<?=home_url('/contact')?>" title="Contact Us" class="large_button">Contact Us</a></p>
                 </div>
             </div>
             <div id="blue">
-                contact form here
+                <h2>Send us a confidential message</h2>
+                <?=do_shortcode('[gravityform id=6 title=false description=false ajax=true]')?>
             </div>
         </div>
         <div id="press">

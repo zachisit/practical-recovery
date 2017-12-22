@@ -6,10 +6,13 @@
         <div class="wrapper">
             <div id="left">
                 <h2>Download Our Brochure of Addiction Treatment Services</h2>
-                <a class="large_button pdf" href="" title="Download PDF">Download PDF</a>
+                <div class="row"><a class="large_button pdf" href="" title="Download PDF">Download PDF</a></div>
             </div>
             <div id="right">
                 <h2>NEWSLETTER SIGNUP</h2>
+                <div id="newsletter_signup">
+                    <?=do_shortcode('[yikes-mailchimp form="2"]')?>
+                </div>
             </div>
         </div>
     </div>

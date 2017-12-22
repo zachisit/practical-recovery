@@ -126,57 +126,59 @@ body {
 }
 
 ul {
-    margin:0;
-    padding:0;
-  }
+  margin:0;
+  padding:0;
+}
 
 h1, h2, h3, h4, h5, h6 {
-    margin:0 0 0.500em 0;
-    padding:0;
-  }
+  margin:0 0 0.500em 0;
+  padding:0;
+}
 
 a {
-    outline:none;
-    text-decoration:none;
-  }
+  outline:none;
+  text-decoration:none;
+}
 
 .wrapper {
-    margin:auto;
-    float:none;
-    max-width:1290px;
-    display:block;
+  margin:auto;
+  float:none;
+  max-width:1290px;
+  display:block;
+
+  &.small {
+    max-width:600px
   }
+}
 
 .pdf_link:after {
-    content:"";
-    background:url(../images/preload/pdf_link.png) center right no-repeat;
-    padding:0 1em 0 0.5em;
-    white-space:nowrap;
-  }
+  content:"";
+  background:url(../images/preload/pdf_link.png) center right no-repeat;
+  padding:0 1em 0 0.5em;
+  white-space:nowrap;
+}
 
 .doc_link:after {
-    content:"";
-    background:url(../images/preload/word_link.png) center right no-repeat;
-    padding:0 1em 0 0.5em;
-    white-space:nowrap;
-  }
+  content:"";
+  background:url(../images/preload/word_link.png) center right no-repeat;
+  padding:0 1em 0 0.5em;
+  white-space:nowrap;
+}
 
 .button_link {
-    background:orange;/*TODO:change later*/;
-    padding:0.438em 1.250em;
-    text-align:center;
-    text-decoration:none;
-    text-transform:uppercase;
-    color:white !important;
-    -webkit-border-radius:0.250em;
-    -moz-border-radius:0.250em;
-    border-radius:0.250em;
+  background:orange;/*TODO:change later*/;
+  padding:0.438em 1.250em;
+  text-align:center;
+  text-decoration:none;
+  text-transform:uppercase;
+  color:white !important;
+  @include border-radius(0.250em);
 
-    &:hover {
-      transition:background 0.7s ease;
-      background:orange;/*TODO:change later*/;
-    }
+  &:hover {
+    transition:background 0.7s ease;
+    background:orange;/*TODO:change later*/;
   }
+}
 
 .large_button {
   background:$brand_color_green;
@@ -209,26 +211,46 @@ a {
   }
 }
 
-.bold, .strong {
-    font-weight:900;
+.yikes-easy-mc-form {
+
+  label {
+    padding:0 !important;
   }
+
+  .submit-button-inline-label {
+    width:0 !important;
+    min-width:0 !important;
+    float:right !important;
+  }
+}
+
+.row {
+  display:block;
+  margin:1em 0;
+}
+
+.bold, .strong {
+  font-weight:900;
+}
+
 .textblock {
   float:left;
   width:100%;
 }
+
 .telephone_link {
-    font-weight:normal;
-    color:white;
-    text-decoration:none;
-  }
+  font-weight:normal;
+  color:white;
+  text-decoration:none;
+}
 
 .mobile_only {
-    display:none;
+  display:none;
 
-    @media #{$mobile_phone_size} {
-      display:block;
-    }
+  @media #{$mobile_phone_size} {
+    display:block;
   }
+}
 
 /*--------------------------------------------------------------
 # Header
@@ -711,14 +733,17 @@ header {
   #contact {
     width:100%;
     float:left;
+    font-family:'Kreon', Helvetica, sans-serif;
 
     #green {
       float:left;
       width:50%;
-      background:$brand_color_green;
+      background:$brand_color_green url(images/preload/home-green-section.jpg) no-repeat;
+      background-attachment:right;
+      height:486px;
 
       .textblock {
-        margin:0 0 1em 0;
+        margin:0 0 2em 0;
         text-align:right;
         color:white;
 
@@ -727,13 +752,67 @@ header {
           padding:0 2em 0 0;
           font-size:1em;
         }
+
+        &:first-of-type {
+          margin:3em 0 2em 0;
+        }
       }
     }
 
     #blue {
-      background:$brand_color_blue;
+      background:$brand_color_blue url(images/preload/home-blue-section.jpg) no-repeat;
+      background-attachment:left;
       width:50%;
       float:right;
+      height:486px;
+
+      h2 {
+        color:white;
+        padding:2em 0 0 0;
+        text-transform:uppercase;
+        margin:auto;
+        font-weight:100;
+        width:75%;
+      }
+
+      form {
+        margin:-19px auto 0 auto;
+        width:75%;
+
+        input, textarea {
+          background:none;
+          border:3px solid #f6feff;
+          @include border-radius(1em);
+          color:white;
+          padding:0.4em;
+
+          &::placeholder {
+            color:white;
+            padding:0.4em;
+          }
+        }
+
+        .gform_footer {
+          margin:1em 0 0 0;
+
+          .gform_button {
+            width:97%;
+            display:block;
+            background:white;
+            @include border-radius(4em);
+            text-align:center;
+            text-transform:uppercase;
+            color:$brand_color_blue;
+            border:none;
+            font-weight:500;
+            text-shadow:2px 1px #fff;
+          }
+        }
+      }
+
+      .videoWrapper {
+        display:none;
+      }
     }
   }
 
@@ -762,6 +841,7 @@ header {
     padding:2em 0;
 
     ul {
+      margin:1em 0 0 0;
       @include ul-list-style-no-type;
 
       li {
@@ -782,7 +862,7 @@ header {
 
     #two {
       float:left;
-      margin:0 1em;
+      margin:0 0 0 5em;
     }
 
     #three {
@@ -1003,6 +1083,59 @@ footer {
     #right {
       float:right;
       width:40%;
+
+      #newsletter_signup {
+        display:block;
+
+        form {
+
+          input {
+            background:none;
+            border:3px solid #f6feff;
+            @include border-radius(1em);
+            color:white;
+            padding:0.4em;
+            position:relative;
+            height:47px;
+
+            &::placeholder {
+              color:white;
+              padding:0.4em;
+            }
+          }
+
+          .yikes-easy-mc-submit-button { //rest of this code is in Globalized
+            float:right;
+            background:$brand_color_green;
+            color:white;
+            text-align:center;
+            font-size:1em;
+            border:none;
+            margin:3px 0 0 -152px;
+            width:47px;
+            position:absolute;
+            border-top-right-radius:0.8em;
+            border-bottom-right-radius:0.8em;
+          }
+
+          .yikes-easy-mc-form {
+
+            label {
+              padding:0 !important;
+            }
+
+            .submit-button-inline-label {
+              width:0 !important;
+              min-width:0 !important;
+              float:right !important;
+            }
+          }
+        }
+
+        .edit-link {
+          display:none !important;
+        }
+      }
     }
   }
 
@@ -1031,12 +1164,13 @@ footer {
     #one {
       float:left;
       width:20%;
+      margin:0 1.6em 0 0;
     }
 
     #two {
       float:left;
       width:20%;
-      margin:0 1em;
+      margin:0 1.6em 0 0;
     }
 
     #three {
