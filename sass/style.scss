@@ -842,6 +842,14 @@ header {
 #sidebar {
   float:right;
   width:28%;
+
+  img {
+
+    &:hover {
+      opacity:0.8;
+      @include transition(opacity 800ms ease);
+    }
+  }
 }
 
 /*--------------------------------------------------------------

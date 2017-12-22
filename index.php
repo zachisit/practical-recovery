@@ -20,7 +20,12 @@ get_header(); ?>
                 <?=get_page_content('4')?>
             </div>
             <div id="sidebar">
-                <a href="" title=""><img src="<?=get_template_directory_uri(); ?>/images/preload/My-addiction-recovery-story.jpg" alt="<?=get_bloginfo( 'name' )?> - Home" /></a>
+                <a href="https://fast.wistia.net/embed/iframe/w78666dkc1?popover=true?TB_iframe=true" class="thickbox"><img src="<?=get_template_directory_uri(); ?>/images/preload/My-addiction-recovery-story.jpg" alt="<?=get_bloginfo( 'name' )?> - Home" /></a>
+            </div>
+            <div id="my-content-id" style="display:none;">
+                <p>
+                    This is my hidden content! It will appear in ThickBox when the link is clicked.
+                </p>
             </div>
         </div>
         <div id="latest_post_read_what">

@@ -18,7 +18,7 @@
 ## Dependencies
 * SASS - theme uses SASS compiler for all stylesheets used in theme. Normal .css files will be found in the theme so user can put normal css declarations without editing the sass file if needed.
 * In-house templating engine, found in functions.php
- * [Lightbox2](http://lokeshdhakar.com/projects/lightbox2/) for lightbox modals on frontend
+ * Utilizing native WordPress Thickbox for lightbox modals on frontend
  * While respecting that a theme does not need a list of poorly written plugins that complete functionality that a compentant developer can write from scratch, this theme has chosen certain plugins that extend or compliment the overall architecture of the theme itself. A list of those plugins are in the section [Theme Plugins](#theme-plugins) - if any of these plugins are not installed then an error will print in the admin screen alerting user to complete installation
 
 ## Theme Custom Post Types
