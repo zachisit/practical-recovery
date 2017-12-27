@@ -878,6 +878,7 @@ header {
 #page_header {
   width:100%;
   float:left;
+  margin:0 0 2em 0;
   position:relative;
   @include image_responsive;
 
@@ -977,6 +978,51 @@ header {
     li {
       margin:0 0 0.4em 0;
       padding:0;
+    }
+  }
+
+  .staff_list {
+    list-style-type:none;
+
+    a {
+      border:none;
+    }
+
+    li {
+      display:inline-block;
+      margin:0 1em 0 0;
+      width:32%;
+      @include image_responsive;
+
+      img {
+
+        &:hover {
+          opacity:0.5;
+          transition:opacity 500ms ease;
+        }
+      }
+
+      h2 {
+        text-align:center;
+        font-size:1.5em !important;
+        font-weight:700;
+        margin:0 0 0.4em 0;
+        padding:0;
+        color:#4ea0d4;
+      }
+
+      h3 {
+        text-align:center;
+        font-size:1.3em !important;
+        font-weight:100;
+        font-style:italic;
+        margin:0;
+        padding:0;
+      }
+
+      &:nth-child(3n) {
+        margin:0;
+      }
     }
   }
 }
