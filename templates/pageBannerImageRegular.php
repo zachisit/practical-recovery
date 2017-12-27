@@ -4,6 +4,6 @@
  */
 ?>
 <div id="page_header" class="regular">
-    <?=get_the_post_thumbnail(null, 'full');?>
+    <?=featured_image()?>
     <h1><?=the_title(); ?></h1>
 </div>

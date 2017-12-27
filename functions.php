@@ -193,7 +193,7 @@ function featured_image() {
     if (empty($tub)) {
         return "<img src='"
             . get_template_directory_uri()
-            . "/images/preload/featured_image_placeholder.png' alt='"
+            . "/images/preload/page_banner_placeholder.jpg' alt='"
             . get_the_title()
             . "' />";
     } else {
