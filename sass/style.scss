@@ -273,7 +273,7 @@ header {
 
   #top {
     float:right;
-    width:53%;
+    width:60%;
     margin:0 0 1em 0;
 
     #call_us {
@@ -339,7 +339,7 @@ header {
 
           &:last-child {
             font-size:1.2em;
-            margin:-3px 0 0 0;
+            margin:-4px 0 0 0;
           }
         }
       }
@@ -347,6 +347,32 @@ header {
 
     #search {
       float:right;
+      margin:1.2em 0 0 0;
+
+      form {
+        @include border-radius(3em);
+        border:0.33em solid $brand_color_blue;
+        padding:0.25em 0.25em 0.25em 0.35em;
+
+        .assistive-text {
+          display:none;
+        }
+
+        .field {
+          font-size:1em;
+          color:$brand_text_color;
+          border:none;
+          outline:none;
+        }
+
+        .submit {
+          border:none;
+          @include border-radius(2em);
+          background:$brand_color_blue;
+          color:white;
+          font-size:1em;
+        }
+      }
     }
   }
 

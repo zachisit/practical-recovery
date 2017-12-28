@@ -56,7 +56,7 @@
                 </ul>
             </div>
             <div id="search">
-                search here
+                <?php get_search_form()?>
             </div>
         </div>
         <div id="menu">
