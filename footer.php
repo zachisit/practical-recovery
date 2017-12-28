@@ -35,9 +35,10 @@
     <div id="bottom">
         <div class="wrapper">
             <p>&copy; <?php echo date("Y"); ?> <?=get_bloginfo( 'name' ); ?></p>
-            <ul>
-                <li><a href="" title="Privacy Policy">Privacy Policy</a></li> |
-                <li><a href="" title="Disclaimers">Disclaimers</a></li>
+            <ul id="footer_bottom_menu">
+                <li><a href="<?=home_url('privacy-policy')?>" title="Privacy Policy">Privacy Policy</a></li>
+                <li><a href="<?=home_url('disclaimers')?>" title="Disclaimers">Disclaimers</a></li>
+                <li><a href="<?=home_url('sitemap')?>" title="sitemap">Sitemap</a></li>
             </ul>
         </div>
         <div id="scroll_top">

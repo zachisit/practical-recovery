@@ -1340,7 +1340,7 @@ footer {
       text-align:left;
     }
 
-    ul {
+    #footer_bottom_menu {
       @include ul-list-style-no-type;
 
       li {
@@ -1349,6 +1349,12 @@ footer {
         a {
           color:white;
           text-decoration:underline;
+        }
+
+        &:nth-child(2):after, &:nth-child(1):after {
+          content:'|';
+          color:white;
+          margin:0 0 0 0.4em;
         }
       }
     }
