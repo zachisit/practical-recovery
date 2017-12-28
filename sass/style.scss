@@ -336,6 +336,11 @@ header {
               @include transition(color 500ms ease);
             }
           }
+
+          &:last-child {
+            font-size:1.2em;
+            margin:-3px 0 0 0;
+          }
         }
       }
     }
@@ -895,7 +900,7 @@ header {
     right:0;
     left:0;
     text-transform:uppercase;
-    font-family:Helvetica, sans-serif;
+    font-family:'Kreon', sans-serif;
   }
 }
 
@@ -1039,6 +1044,40 @@ header {
     &:hover {
       opacity:0.8;
       @include transition(opacity 800ms ease);
+    }
+  }
+
+  .widgetblock {
+    margin:0 0 4em 0;
+    display:block;
+
+    h2 {
+      display:none;
+    }
+
+    .menu {
+      display:block;
+      @include ul-list-style-no-type;
+
+      li {
+        border-bottom:1px solid #ccc;
+        margin:0 0 0.5em 0;
+        padding:0.5em 0;
+
+        a {
+          font-size:1.055em;
+          text-transform:uppercase;
+          font-family:'Kreon', sans-serif;
+          color:$brand_text_color;
+          font-weight:100;
+
+          &:hover {
+            color:$brand_color_green;
+            font-weight:500;
+            @include transition(color 500ms ease);
+          }
+        }
+      }
     }
   }
 }
