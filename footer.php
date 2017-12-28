@@ -6,7 +6,7 @@
         <div class="wrapper">
             <div id="left">
                 <h2>Download Our Brochure of Addiction Treatment Services</h2>
-                <div class="row"><a class="large_button pdf" href="" title="Download PDF">Download PDF</a></div>
+                <div class="row"><a class="large_button pdf" href="https://www.practicalrecovery.com/wp-content/uploads/2016/12/PR_Bro_Web.pdf" title="Download PDF" target="_blank">Download PDF</a></div>
             </div>
             <div id="right">
                 <h2>NEWSLETTER SIGNUP</h2>
