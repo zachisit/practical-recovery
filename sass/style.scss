@@ -438,7 +438,7 @@ header {
 
 #menu {
     float:right;
-    width:70%;
+    width:auto;
     clear:both;
     margin:-1em 0 0 0;//@TODO:not most elegant;fix later
 
@@ -458,7 +458,6 @@ header {
         display:inline-block;
         margin:0 1em 0 0;
         position:relative;
-        @include ul-li-last-item-no-margin;
 
         a {
           font-size:1em;
@@ -489,6 +488,18 @@ header {
 
           a {
             color:$brand_color_blue;
+          }
+        }
+
+        &:last-child {
+          margin:0;
+          padding:0;
+
+          a {
+
+            &:after {
+              display:none;
+            }
           }
         }
       }
