@@ -12,9 +12,8 @@
 # - Contact Page
 # - Online Education Plugin
 # Attorneys CPT Single Page
-# Sidebar
 # Page Specific Content
-# Sidebar
+# Sidebar - Internal and Homepage
 # Alignments
 # Responsive Video Wrapper & Video Object
 # Scroll To Top
@@ -1071,7 +1070,7 @@ header {
 }
 
 /*--------------------------------------------------------------
-# Sidebar - internal
+# Sidebar - Internal and Homepage
 --------------------------------------------------------------*/
 #sidebar {
   float:left;
@@ -1117,6 +1116,10 @@ header {
         }
       }
     }
+  }
+
+  &.sidebar_right {
+    float:right;
   }
 }
 
