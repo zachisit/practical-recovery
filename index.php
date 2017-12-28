@@ -59,7 +59,7 @@ get_header(); ?>
                 <div class="phone_number"><a href="tel:1-800-977-6110">(800) 977-6110</a></div>
                 <div id="empower">Empower yourself. Call now.</div>
                 <div id="cta">Phone answered 7 days a week | No obligation | Completely confidential</div>
-                <div id="email"><a href="" title="email us" class="large_button">Email Us</a></div>
+                <div id="email"><a href="<?=home_url('contact-us-2')?>" title="email us" class="large_button">Email Us</a></div>
             </div>
         </div>
         <div id="contact">
