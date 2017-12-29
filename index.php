@@ -92,6 +92,18 @@ get_header(); ?>
                 <?=do_shortcode('[gravityform id=6 title=false description=false ajax=true]')?>
             </div>
         </div>
+        <div id="facebook">
+            <script type="text/javascript">
+                FB.api(
+                    "/{page-id}/ratings",
+                    function (response) {
+                        if (response && !response.error) {
+                            console.log(response)
+                        }
+                    }
+                );
+            </script>
+        </div>
         <div id="press">
             <div class="wrapper">
                 <h2 class="section_headline">Visit Our Press Page</h2>

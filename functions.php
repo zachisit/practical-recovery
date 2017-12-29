@@ -9,6 +9,7 @@ require_once "shortcodes/sitemap.php";
 require_once "shortcodes/team_member_list.php";
 require_once "post-type/testimonials.php";
 require_once "post-type/team.php";
+require_once "post-type/blog.php";
 require_once "page_edit/page_scripts.php";
 require_once "page_edit/page_show_sidebar.php";
 
@@ -27,7 +28,13 @@ function theme_widgets_init()
         'after_title'   => '</h2>',
     ] );
 
-    //additional sidebars here
+    register_sidebar( [
+        'name' => 'Facebook Reviews',
+        'id'   => 'facebook-reviews',
+        'description'   => 'Specifically for Facebook Reviews',
+        'before_widget' => '<div class="widgetblock">',
+        'after_widget'  => '</div>',
+    ] );
 }
 add_action( 'widgets_init', 'theme_widgets_init' );
 
