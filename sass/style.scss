@@ -42,10 +42,6 @@ $pinterest_brand_color:#bd081c;
 /*--------------------------------------------------------------
 # Mixins
 --------------------------------------------------------------*/
-$mobile_phone_size:"only screen and (max-width:430px)";//to be depreciated; use mixins below
-$table_size:"only screen and (min-width:430px) and (max-width:880px)";//to be depreciated; use mixins below
-$medium_desktop_size:"only screen and (min-width:881px) and (max-width:1300px)";//to be depreciated; use mixins below
-
 @mixin bp-large {
   @media only screen and (max-width: 60em) {
     @content;
@@ -146,8 +142,18 @@ a {
   max-width:1290px;
   display:block;
 
+  @include bp-small {
+    width:100%;
+    display:block;
+  }
+
   &.small {
-    max-width:600px
+    max-width:600px;
+
+    @include bp-small {
+      width:100%;
+      display:block;
+    }
   }
 }
 
@@ -247,7 +253,7 @@ a {
 .mobile_only {
   display:none;
 
-  @media #{$mobile_phone_size} {
+  @include bp-small {
     display:block;
   }
 }
@@ -275,8 +281,19 @@ header {
     width:60%;
     margin:0 0 1em 0;
 
+    @include bp-small {
+      width:100%;
+      display:block;
+    }
+
     #call_us {
       float:left;
+
+      @include bp-small {
+        width:100%;
+        display:block;
+        text-align:center;
+      }
 
       p {
         color:$brand_color_blue;
@@ -316,6 +333,11 @@ header {
       float:left;
       margin:0 0 0 4em;
 
+      @include bp-small {
+        width:100%;
+        display:block;
+      }
+
       ul {
         @include ul-list-style-no-type;
         margin:1.2em 0 0 0;
@@ -347,6 +369,10 @@ header {
     #search {
       float:right;
       margin:1.2em 0 0 0;
+
+      @include bp-small {
+        display:none;
+      }
 
       form {
         @include border-radius(3em);
@@ -381,6 +407,10 @@ header {
     left:0;
     width:100%;
     z-index:99999999;
+
+    @include bp-small {
+      position:relative;
+    }
   }
 }
 
@@ -389,6 +419,10 @@ header {
 --------------------------------------------------------------*/
 #search_mobile {
     display:none;
+
+    @include bp-small {
+      display:block;
+    }
   }
 
 #menu_close {
@@ -406,7 +440,7 @@ header {
       color:$error_red;
     }
 
-    @media #{$mobile_phone_size} {
+    @include bp-small {
       display:block;
     }
   }
@@ -430,7 +464,7 @@ header {
       float:left;
     }
 
-    @media #{$mobile_phone_size} {
+    @include bp-small {
       display:block;
     }
   }
@@ -441,7 +475,7 @@ header {
     clear:both;
     margin:-1em 0 0 0;//@TODO:not most elegant;fix later
 
-    @media #{$mobile_phone_size} {
+    @include bp-small {
       background:$error_red;
       width:100%;
       height:576px;
@@ -512,7 +546,7 @@ header {
         width:200px;
         z-index:2;
 
-        @media #{$mobile_phone_size} {
+        @include bp-small {
           background:none;
           position:relative;
           border-top:1px solid #ccc;
@@ -530,7 +564,7 @@ header {
           width:95%;
           border-bottom:1px solid white;
 
-          @media #{$mobile_phone_size} {
+          @include bp-small {
             width:100%;
             border:none;
             padding:0;
@@ -567,6 +601,10 @@ header {
     margin:0;
     padding:0;
     color:$brand_color_blue;
+
+    @include bp-small {
+      text-align:center;
+    }
   }
 
   #banner_image {
@@ -585,6 +623,11 @@ header {
       width:50%;
       border:0.4em solid white;
       background:rgba(255,255,255,0.6);
+
+      @include bp-small {
+        bottom:4%;
+        width:81%;
+      }
 
       .full_width {
         display:block;
@@ -620,6 +663,10 @@ header {
       min-height:470px;
       @include border-radius(0.4em);
 
+      @include bp-small {
+        width:100%;
+      }
+
       .title {
         font-size:2em;
         margin:0;
@@ -640,6 +687,10 @@ header {
         margin:1.1em 0 0 0;
         padding:0 0 0 0.8em;
         @include image_responsive;
+
+        @include bp-small {
+          width:100%;
+        }
       }
 
       .excerpt {
@@ -647,6 +698,11 @@ header {
         width:40%;
         padding:0 0.5em 0 0;
         margin:0 1em 1em 0;
+
+        @include bp-small {
+          width:100%;
+          float:left;
+        }
 
         p {
           font-size:1.1em;
@@ -666,6 +722,18 @@ header {
     #read_what {
       float:right;
       width:49%;
+
+      @include bp-small {
+        width:100%;
+        float:left;
+      }
+
+      @include bp-small {
+        img {
+          width:100%;
+          height:auto;
+        }
+      }
 
       h2 {
         color:$brand_color_green;
@@ -732,12 +800,20 @@ header {
       width:50%;
       text-align:center;
 
+      @include bp-small {
+        width:90%;
+      }
+
       .phone_icon {
         margin:0;
         padding:0;
         color:$brand_color_green;
         font-size:5.666em;
         text-shadow:2px 2px #fff;
+
+        @include bp-small {
+          font-size:3em;
+        }
       }
 
       .phone_number {
@@ -746,6 +822,10 @@ header {
           color:white;
           font-size:3em;
           text-shadow:2px 2px #ccc;
+
+          @include bp-small {
+            font-size:2em;
+          }
         }
       }
 
@@ -785,6 +865,11 @@ header {
       background-attachment:right;
       height:486px;
 
+      @include bp-small {
+        background:$brand_color_green;
+        width:100%;
+      }
+
       .textblock {
         margin:0 0 2em 0;
         text-align:right;
@@ -809,6 +894,17 @@ header {
       float:right;
       height:486px;
 
+      @include bp-small {
+        background:$brand_color_blue;
+        width:100%;
+        height:635px;
+
+        .gform_wrapper {
+          width:90%;
+          margin:auto;
+        }
+      }
+
       h2 {
         color:white;
         padding:2em 0 0 0;
@@ -816,11 +912,21 @@ header {
         margin:auto;
         font-weight:100;
         width:75%;
+
+        @include bp-small {
+          width:90%;
+          font-size:1.5em;
+        }
       }
 
       form {
         margin:-19px auto 0 auto;
         width:75%;
+
+        @include bp-small {
+          margin:auto;
+          width:100%;
+        }
 
         input, textarea {
           background:none;
@@ -874,6 +980,16 @@ header {
         display:inline-block;
         margin:0 4em 0 0;
         @include ul-li-last-item-no-margin;
+
+        @include bp-small{
+          width:100%;
+          margin:0;
+
+          img {
+            margin:auto;
+            display:table;
+          }
+        }
       }
     }
   }
@@ -901,15 +1017,34 @@ header {
 
     #one {
       float:left;
+
+      @include bp-small {
+        float:left;
+        width:100%;
+        text-align:center;
+      }
     }
 
     #two {
       float:left;
       margin:0 0 0 5em;
+
+      @include bp-small {
+        float:left;
+        width:100%;
+        text-align:center;
+        margin:0;
+      }
     }
 
     #three {
       float:right;
+
+      @include bp-small {
+        float:left;
+        width:100%;
+        text-align:center;
+      }
     }
   }
 }
@@ -944,6 +1079,10 @@ header {
 #content_left {
   float:left;
   width:60%;
+
+  @include bp-small {
+    width:100%;
+  }
 
   h1, h2, h3, h4, h5 {
     font-family:'Kreon', serif
@@ -982,6 +1121,11 @@ header {
   float:right;
   width:70%;
   margin:0 0 2em 0;
+
+  @include bp-small {
+    width:100%;
+    float:left;
+  }
 
   h1 {
     color:$brand_text_color;
@@ -1036,6 +1180,10 @@ header {
       width:32%;
       @include image_responsive;
 
+      @include bp-small {
+        width:100%;
+      }
+
       img {
 
         &:hover {
@@ -1075,6 +1223,11 @@ header {
 #sidebar {
   float:left;
   width:28%;
+
+  @include bp-small {
+    width:100%;
+    display:block;
+  }
 
   img {
 
@@ -1131,7 +1284,7 @@ header {
     float:left;
     margin-right:1.5em;
 
-    @media #{$mobile_phone_size} {
+    @include bp-small {
       width:100%;
       height:auto;
       margin:0;
@@ -1143,7 +1296,7 @@ header {
     float:right;
     margin-left:1.5em;
 
-    @media #{$mobile_phone_size} {
+    @include bp-small {
       width:100%;
       height:auto;
       float:left;
@@ -1157,7 +1310,7 @@ header {
     margin-left:auto;
     margin-right:auto;
 
-    @media #{$mobile_phone_size} {
+    @include bp-small {
       width:100%;
       height:auto;
     }
@@ -1203,11 +1356,11 @@ video {
       right:7.5%;
       margin:-4em 0 1.25em 0;
 
-      @media #{$mobile_phone_size} {
+      @include bp-small {
         right:1%;
       }
 
-      @media #{$table_size} {
+      @include bp-medium {
         right:1%;
       }
 
@@ -1269,11 +1422,23 @@ footer {
     #left {
       float:left;
       width:40%;
+
+      @include bp-small {
+        width:71%;
+        float:none;
+        margin:0 auto 1em 0;
+        display:block;
+      }
     }
 
     #right {
       float:right;
       width:40%;
+
+      @include bp-small {
+        width:100%;
+        display:block;
+      }
 
       #newsletter_signup {
         display:block;
@@ -1356,16 +1521,36 @@ footer {
       float:left;
       width:20%;
       margin:0 1.6em 0 0;
+
+      @include bp-small {
+        width:100%;
+        display:block;
+        margin:0;
+        text-align:center;
+      }
     }
 
     #two {
       float:left;
       width:20%;
       margin:0 1.6em 0 0;
+
+      @include bp-small {
+        width:100%;
+        display:block;
+        margin:0;
+        text-align:center;
+      }
     }
 
     #three {
       float:left;
+
+      @include bp-small {
+        width:100%;
+        display:block;
+        text-align:center;
+      }
     }
   }
 
@@ -1379,10 +1564,19 @@ footer {
 
     p {
       text-align:left;
+
+      @include bp-small {
+        text-align:center;
+      }
     }
 
     #footer_bottom_menu {
       @include ul-list-style-no-type;
+
+      @include bp-small {
+        width:68%;
+        margin:auto;
+      }
 
       li {
         display:inline-block;
