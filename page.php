@@ -4,12 +4,14 @@
  *
  * @package practical-recovery
  */
-get_header(); ?>
+get_header();
+$showSide = get_post_meta( get_the_ID(), '_show_sidebar', true );
+?>
     <main>
         <?php pageBannerImage() ?>
         <div class="wrapper">
-            <?php get_sidebar(); ?>
-            <div id="content_right">
+            <?php if ($showSide) { get_sidebar(); } ?>
+            <div id="<?=($showSide) ? 'content_right' : 'full_width' ?>" class="content_text">
                 <?php while ( have_posts() ) : the_post();
                     echo the_content();
                 endwhile; ?>

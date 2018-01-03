@@ -1121,6 +1121,17 @@ header {
   float:right;
   width:70%;
   margin:0 0 2em 0;
+}
+
+#full_width {
+  width:100%;
+  float:left;
+}
+
+.content_text {
+  float:right;
+  width:70%;
+  margin:0 0 2em 0;
 
   @include bp-small {
     width:100%;
