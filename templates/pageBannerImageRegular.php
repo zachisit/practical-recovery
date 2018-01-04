@@ -4,6 +4,6 @@
  */
 ?>
 <div id="page_header" class="regular">
-    <?=featured_image()?>
+    <?=getPageFeaturedImageBanner()?>
     <h1><?=the_title(); ?></h1>
 </div>

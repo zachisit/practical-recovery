@@ -110,6 +110,30 @@ $pinterest_brand_color:#bd081c;
   -moz-border-radius:$border;
   border-radius:$border;
 }
+@mixin after-font-awesome($type, $unicode, $size, $margin, $color, $weight) {
+  @if $type == 'after'{
+    &:after {
+      content:$unicode;
+      font-family:"FontAwesome";
+      font-size:$size;
+      color:$color;
+      font-weight:$weight;
+      margin:$margin;
+      @content;
+    }
+  }
+  @if $type == 'before' {
+    &:before {
+      content:$unicode;
+      font-family:"FontAwesome";
+      font-size:$size;
+      color:$color;
+      font-weight:$weight;
+      margin:$margin;
+      @content;
+    }
+  }
+}
 
 
 /*--------------------------------------------------------------
@@ -1223,6 +1247,66 @@ header {
 
       &:nth-child(3n) {
         margin:0;
+      }
+    }
+  }
+
+  .blog_list {
+    @include ul-list-style-no-type;
+
+    li {
+      display:block;
+      margin:0 0 4em 0;
+      float:left;
+      width:100%;
+
+      .featured_image {
+        float:left;
+        width:25%;
+        overflow:hidden;
+        height:280px;
+
+        @include image_responsive;
+      }
+
+      .content {
+        width:73%;
+        float:left;
+        margin:0 0 0 1em;
+
+        h3 {
+          margin:0;
+          padding:0;
+
+          a {
+            font-size:1.4em;
+            font-weight:600;
+            border-bottom:none;
+            color:$brand_color_blue;
+          }
+        }
+
+        .date_posted {
+          text-transform:uppercase;
+          color:#666466;
+          font-size:0.8em;
+          margin:0.8em 0;
+        }
+
+        .article {
+          font-size:1em;
+          line-height:1.5em;
+        }
+
+        .read_more {
+          display:block;
+          margin:1em 0 0 0;
+          text-transform:uppercase;
+          color:$brand_color_blue;
+          border-bottom:none;
+
+          @include after-font-awesome(after, '\f061', 0.8em, 0 0 0 0.5em, $brand_color_blue, null)
+        }
       }
     }
   }

@@ -7,6 +7,7 @@
 
 require_once "shortcodes/sitemap.php";
 require_once "shortcodes/team_member_list.php";
+require_once "shortcodes/blog.php";
 require_once "post-type/testimonials.php";
 require_once "post-type/team.php";
 require_once "post-type/blog.php";
@@ -192,11 +193,37 @@ function youtube_url_to_embed($youtube_url) {
 }
 
 /**
- * Featured Image
- * Return a featured image in a post, or return placeholder
+ * Get Featured Image
+ *
+ * Return a featured image of any Post with size passed in
+ *
+ * @param $id
+ * @param $size - defaults to 'small' if none passed in
  * @return string
  */
-function featured_image() {
+function getFeaturedImage($id, $size) {
+    $size = ($size) ? $size : 'small';
+
+    $tub = get_the_post_thumbnail($id, $size);
+
+    if (empty($tub)) {
+        return "<img src='"
+            . get_template_directory_uri()
+            . "/images/preload/featured_image_placeholder.png' alt='Placeholder image' />";
+    } else {
+        return $tub;
+    }
+}
+
+/**
+ * Return Page Featured Image Banner
+ *
+ * Return a featured image as a page banner,
+ * or a placeholder banner
+ *
+ * @return string
+ */
+function getPageFeaturedImageBanner() {
     $tub = get_the_post_thumbnail(null, 'full');
 
     if (empty($tub)) {
