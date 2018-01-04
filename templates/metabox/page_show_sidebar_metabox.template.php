@@ -3,7 +3,7 @@
  * @var string $__show_sidebar
  */
 $meta = get_post_meta( get_the_ID() );
-$sidebar_checkbox_value = ( isset( $meta['_show_sidebar'][0] ) &&  '1' === $meta['_show_sidebar'][0] ) ? 1 : 0;
+$sidebar_checkbox_value = ( isset( $meta['_show_sidebar'][0] ) &&  '1' === $meta['_show_sidebar'][0] ) ? 1 : 1;
 ?>
 
 <label for="_show_sidebar">Show Sidebar?</label>

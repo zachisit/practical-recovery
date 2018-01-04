@@ -1252,6 +1252,7 @@ header {
   }
 
   .blog_list {
+    margin:3em 0 0 0;
     @include ul-list-style-no-type;
 
     li {
