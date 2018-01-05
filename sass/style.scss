@@ -989,6 +989,37 @@ header {
     }
   }
 
+  #facebook {
+    display:block;
+    padding:2em 0;
+    float:left;
+
+    .widgetblock {
+      width:80%;
+      margin:auto;
+
+      h2 {
+        display:none;
+      }
+
+      .wpac {
+
+        .wp-facebook-list {
+
+          .wp-facebook-place {
+            width:20% !important;
+            margin:0 auto 2em auto !important;
+          }
+
+          .wp-facebook-content-inner {
+            float:left;
+            width:100%;
+          }
+        }
+      }
+    }
+  }
+
   #press {
     float:left;
     width:100%;

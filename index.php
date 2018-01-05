@@ -32,7 +32,7 @@ get_header(); ?>
         <div id="latest_post_read_what">
             <div class="wrapper">
                 <div id="latest_post">
-                    <?php get_latest_post('homepage', 1, true, true, true, true)?>
+                    <?php //get_latest_post('homepage', 1, true, true, true, true)?>
                 </div>
                 <div id="read_what">
                     <h2>Read what people are saying about us</h2>
@@ -93,16 +93,7 @@ get_header(); ?>
             </div>
         </div>
         <div id="facebook">
-            <script type="text/javascript">
-                FB.api(
-                    "/{page-id}/ratings",
-                    function (response) {
-                        if (response && !response.error) {
-                            console.log(response)
-                        }
-                    }
-                );
-            </script>
+            <?php dynamic_sidebar('facebook-reviews')?>
         </div>
         <div id="press">
             <div class="wrapper">

@@ -19,4 +19,5 @@ jQuery(document).ready(function(){
         arrows: true,
         autoplaySpeed: 5800
     });
+
 });
