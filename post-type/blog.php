@@ -12,7 +12,7 @@ function pr_blog_posttype() {
                 'add_new_item' => __( 'Add New PR Blog' ),
                 'edit_item' => __( 'Edit PR Blog' ),
                 'new_item' => __( 'Add New PR Blog' ),
-                'view_item' => __( 'View PR Blogs' ),
+                'view_item' => __( 'View PR Blog Article' ),
                 'search_items' => __( 'Search PR Blogs' ),
                 'not_found' => __( 'No PR Blogs found' ),
                 'not_found_in_trash' => __( 'No PR Blogs found in trash' )

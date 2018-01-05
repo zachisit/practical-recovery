@@ -6,9 +6,10 @@
  */
 get_header(); ?>
 <main>
-    <div id="content_left">
+    <div id="full_width">
         <?php while ( have_posts() ) : the_post();
-
+            echo '<h1>'.the_title().'</h1>';
+            echo the_content();
         endwhile; ?>
     </div>
     <?php get_sidebar(); ?>

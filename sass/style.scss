@@ -427,8 +427,8 @@ header {
 
   &.fixed-header {
     position:fixed;
-    top:0;
-    left:0;
+    /*top:0;
+    left:0;*/
     width:100%;
     z-index:99999999;
 
@@ -1340,6 +1340,37 @@ header {
           @include after-font-awesome(after, '\f061', 0.8em, 0 0 0 0.5em, $brand_color_blue, null)
         }
       }
+    }
+  }
+}
+
+main {
+  float:left;
+  width:100%;
+  margin:116px 0 0 0;
+
+  .page_content {
+    margin:2em 0;
+
+  }
+  #page_content {
+    margin:2em auto;
+    width:80%;
+  }
+
+  .blog_post {
+
+    h1 {
+      color:$brand_color_blue;
+      font-size:1.4em;
+      margin:0 0 0.6em 0;
+      padding:0;
+    }
+
+    .post_date {
+      font-size:0.78em;
+      text-transform:uppercase;
+      margin:0 0 0.5em 0;
     }
   }
 }

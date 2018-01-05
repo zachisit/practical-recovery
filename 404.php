@@ -7,7 +7,7 @@
  */
 get_header();
 
-four_oh_four_alert(); ?>
+//four_oh_four_alert(); ?>
 
     <main>
         <div id="page_content">

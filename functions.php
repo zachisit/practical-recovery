@@ -72,7 +72,7 @@ function theme_scripts()
     wp_enqueue_script( 'pdf_css_icon_add', get_template_directory_uri() . '/js/pdf_css_icon_add.js', time() );
     wp_enqueue_script( 'slick_carousel_js', 'https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js', [], time(), true );
     wp_enqueue_script( 'slick_carousel_declaractions_js', get_template_directory_uri() . '/js/slick_slider_homepage.js', [], time() );
-    wp_enqueue_script( 'fixed_header', get_template_directory_uri() . '/js/fixed_header.js', [], time() );
+    //wp_enqueue_script( 'fixed_header', get_template_directory_uri() . '/js/fixed_header.js', [], time() );
 
     //localized
     wp_localize_script('preload_directory', 'ajax', [
@@ -264,6 +264,7 @@ function pageBannerImage($parallax = 0) {
  *
  * method is called on 404.php
  */
+//@TODO:requires further testing
 function four_oh_four_alert() {
     //set status
     header("HTTP/1.1 404 Not Found");

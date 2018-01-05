@@ -36,6 +36,7 @@
 
 ## Theme Plugins
 * [WP-SCSS](https://wordpress.org/plugins/wp-scss/) - allows server compiling of SASS file.
+* [Facebook Reviews](https://wordpress.org/plugins/fb-reviews-widget/) - for powering the homepage review block
 * TODO
 
 ## WordPress Version

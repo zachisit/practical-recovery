@@ -36,7 +36,7 @@
 </head>
 <body>
 
-<header class="">
+<header class="fixed-header">
     <div class="wrapper">
         <div id="logo">
             <a href="<?=get_home_url(); ?>" title="<?=get_home_url(); ?> Home"><img src="<?=get_template_directory_uri(); ?>/images/preload/logo1.png" alt="<?=get_bloginfo( 'name' ); ?> - <?=get_home_url(); ?> Logo" /></a>
