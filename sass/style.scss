@@ -1283,7 +1283,7 @@ header {
   }
 
   .blog_list {
-    margin:3em 0 0 0;
+    margin:0;
     @include ul-list-style-no-type;
 
     li {
@@ -1350,7 +1350,7 @@ main {
   margin:116px 0 0 0;
 
   .page_content {
-    margin:2em 0;
+    margin:2em auto;
 
   }
   #page_content {

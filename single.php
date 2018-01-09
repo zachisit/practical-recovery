@@ -6,11 +6,13 @@
  */
 get_header(); ?>
 <main>
-    <div id="full_width">
-        <?php while ( have_posts() ) : the_post();
-            echo '<h1>'.the_title().'</h1>';
-            echo the_content();
-        endwhile; ?>
+    <div class="wrapper page_content">
+        <div id="content_right">
+            <?php while ( have_posts() ) : the_post();?>
+                <h1><?=the_title()?></h1>
+                <?=the_content()?>
+            <?php endwhile; ?>
+        </div>
+        <?php get_sidebar(); ?>
     </div>
-    <?php get_sidebar(); ?>
 <?php get_footer(); ?>
