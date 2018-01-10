@@ -1400,7 +1400,7 @@ main {
       display:none;
     }
 
-    .menu {
+    .menu, ul {
       display:block;
       @include ul-list-style-no-type;
 
