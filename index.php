@@ -94,6 +94,7 @@ get_header(); ?>
         </div>
         <div id="facebook">
             <?php dynamic_sidebar('facebook-reviews')?>
+            <div id="view_more_facebook_reviews">view more</div>
         </div>
         <div id="press">
             <div class="wrapper">

@@ -867,7 +867,7 @@ header {
       width:50%;
       background:$brand_color_green url(images/preload/home-green-section.jpg) no-repeat;
       background-attachment:right;
-      height:486px;
+      height:467px;
 
       @include bp-small {
         background:$brand_color_green;
@@ -896,7 +896,7 @@ header {
       background-attachment:left;
       width:50%;
       float:right;
-      height:486px;
+      height:467px;
 
       @include bp-small {
         background:$brand_color_blue;
@@ -1007,7 +1007,13 @@ header {
       font-size:1em;
       padding:0.5em 0;
       margin:2em auto;
+      cursor:pointer;
       @include border-radius(0.44em);
+
+      &:hover {
+        background:$brand_color_green;
+        @include transition(background 400ms ease);
+      }
     }
   }
 
