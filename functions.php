@@ -436,7 +436,7 @@ function get_latest_post($category_slug, $return_number, $title = false, $excerp
         while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
             <?php if ($title) : ?><h3 class="title"><?=the_title()?></h3><?php endif; ?>
             <?php if ($date) : ?><div class="date"><?=the_date()?></div><?php endif; ?>
-            <?=featured_image() ?>
+            <?=getFeaturedImage() ?>
             <?php if ($excerpt) : ?><div class="excerpt"><?=the_excerpt()?></div><?php endif; ?>
             <?php if ($readmore) : ?><div class="readmore"><a class="large_button" href="<?=the_permalink()?>" title="<?=the_title(); ?>">read more</a></div><?php endif; ?>
     <?php

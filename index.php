@@ -32,7 +32,7 @@ get_header(); ?>
         <div id="latest_post_read_what">
             <div class="wrapper">
                 <div id="latest_post">
-                    <?php //get_latest_post('homepage', 1, true, true, true, true)?>
+                    <?php get_latest_post('homepage', 1, true, true, true, true)?>
                 </div>
                 <div id="read_what">
                     <h2>Read what people are saying about us</h2>
