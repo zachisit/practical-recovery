@@ -110,7 +110,7 @@ $pinterest_brand_color:#bd081c;
   -moz-border-radius:$border;
   border-radius:$border;
 }
-@mixin after-font-awesome($type, $unicode, $size, $margin, $color, $weight) {
+@mixin font-awesome-character($type, $unicode, $size, $margin, $color, $weight) {
   @if $type == 'after'{
     &:after {
       content:$unicode;
@@ -226,12 +226,7 @@ a {
 
   &.pdf {
 
-    &::after {
-      content:"\f1c1";
-      font-family:"FontAwesome";
-      font-size:1em;
-      color:white;
-      margin:0 0 0 1em;
+    @include font-awesome-character(after, '\f1c1', 1em, 0 0 0 1em, white, null) {
 
       &:hover {
         color:$brand_color_green;
@@ -335,13 +330,7 @@ header {
           }
         }
 
-        &::before {
-          content:"\f098";
-          font-family:"FontAwesome";
-          font-size:1.3em;
-          color:$brand_color_blue;
-          margin:0 0.2em 0 0;
-        }
+        @include font-awesome-character(before, "\f098", 1.3em, 0 0 0.2em 0, $brand_color_blue, null);
 
         &:hover {
 
@@ -456,13 +445,8 @@ header {
     outline:none;
     border:none;
     background:none;
-
-    &::after {
-      content:"\f057";
-      font-family:"FontAwesome";
-      font-size:2.934em;
-      color:$error_red;
-    }
+  
+    @include font-awesome-character(after, "\f057", 2.934em, null, $error_red, null);
 
     @include bp-small {
       display:block;
@@ -470,28 +454,24 @@ header {
   }
 
 #menu_btn {
-    background:none;
-    float:right;
-    outline:none;
-    display:none;
-    margin:0;
-    top:4em;
-    right:2%;
-    border:none;
-    position:absolute;
+  background:none;
+  float:right;
+  outline:none;
+  display:none;
+  margin:0;
+  top:4em;
+  right:2%;
+  border:none;
+  position:absolute;
+  
+  @include font-awesome-character(after, "\f0c9", 2.934em, null, $error_red, null) {
+    float:left;  
+  };
 
-    &::after {
-      content:"\f0c9";
-      font-family:"FontAwesome";
-      font-size:2.934em;
-      color:$error_red;
-      float:left;
-    }
-
-    @include bp-small {
-      display:block;
-    }
+  @include bp-small {
+    display:block;
   }
+}
 
 #menu {
     float:right;
@@ -1018,6 +998,17 @@ header {
         }
       }
     }
+
+    #view_more_facebook_reviews {
+      width:150px;
+      color:white;
+      background:$brand_color_blue;
+      text-align:center;
+      font-size:1em;
+      padding:0.5em 0;
+      margin:2em auto;
+      @include border-radius(0.44em);
+    }
   }
 
   #press {
@@ -1337,7 +1328,7 @@ header {
           color:$brand_color_blue;
           border-bottom:none;
 
-          @include after-font-awesome(after, '\f061', 0.8em, 0 0 0 0.5em, $brand_color_blue, null)
+          @include font-awesome-character(after, '\f061', 0.8em, 0 0 0 0.5em, $brand_color_blue, null)
         }
       }
     }
@@ -1531,14 +1522,8 @@ video {
         border:0.4em solid white;
         @include border-radius(0.5em);
 
-        &::after {
-          content:"\f0d8";
-          font-family:"FontAwesome";
-          font-size:2.934em;
-          color:white;
+        @include font-awesome-character(after, "\f0d8", 2.934em, auto, white, 100) {
           text-align:center;
-          font-weight:100;
-          margin:auto;
         }
 
         &:hover {
