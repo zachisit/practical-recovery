@@ -290,9 +290,15 @@ header {
   margin:0 0 0.2em 0;
 
   #logo {
+    @include image_responsive;
     float:left;
     margin:2em 0 0 0;
-    @include image_responsive;
+
+    @include bp-small {
+      float:none;
+      margin:auto;
+      width:61%;
+    }
   }
 
   #top {
@@ -311,13 +317,17 @@ header {
       @include bp-small {
         width:100%;
         display:block;
-        text-align:center;
       }
 
       p {
         color:$brand_color_blue;
         font-size:1.1em;
         margin:1.5em 0 0 0;
+
+        @include bp-small {
+          margin:0 0 0 1em;
+          text-align:left;
+        }
 
         a {
           color:$brand_color_blue;
@@ -335,8 +345,8 @@ header {
         &:hover {
 
           &::before {
-            color:$brand_color_green;
             @include transition(color 500ms ease);
+            color:$brand_color_green;
           }
         }
       }
@@ -349,16 +359,23 @@ header {
       @include bp-small {
         width:100%;
         display:block;
+        float:left;
+        margin:0;
       }
 
       ul {
         @include ul-list-style-no-type;
         margin:1.2em 0 0 0;
 
+        @include bp-small {
+          margin:0.5em auto 0 auto;
+          width:80%
+        }
+
         li {
+          @include ul-li-last-item-no-margin;
           float:left;
           margin:0 0.56em 0 0;
-          @include ul-li-last-item-no-margin;
 
           a {
             color:$brand_color_blue;
@@ -366,8 +383,8 @@ header {
             font-size:1.666em;
 
             &:hover {
-              color:$brand_color_green;
               @include transition(color 500ms ease);
+              color:$brand_color_green;
             }
           }
 
@@ -404,8 +421,8 @@ header {
         }
 
         .submit {
-          border:none;
           @include border-radius(2em);
+          border:none;
           background:$brand_color_blue;
           color:white;
           font-size:1em;
@@ -629,7 +646,7 @@ header {
       background:rgba(255,255,255,0.6);
 
       @include bp-small {
-        bottom:4%;
+        bottom:23%;
         width:81%;
       }
 
@@ -644,7 +661,11 @@ header {
         text-align:center;
         margin:1em 0;
         padding:0;
-        font-family: 'Kreon', serif
+        font-family:'Kreon', serif;
+
+        @include bp-small {
+          font-size:1.6em;
+        }
       }
     }
   }
@@ -989,6 +1010,10 @@ header {
           .wp-facebook-place {
             width:20% !important;
             margin:0 auto 2em auto !important;
+
+            @include bp-small {
+              width:100% !important;
+            }
           }
 
           .wp-facebook-content-inner {
@@ -1280,8 +1305,8 @@ header {
   }
 
   .blog_list {
-    margin:0;
     @include ul-list-style-no-type;
+    margin:0;
 
     li {
       display:block;
@@ -1290,12 +1315,11 @@ header {
       width:100%;
 
       .featured_image {
+        @include image_responsive;
         float:left;
         width:25%;
         overflow:hidden;
         height:280px;
-
-        @include image_responsive;
       }
 
       .content {
@@ -1346,6 +1370,10 @@ main {
   width:100%;
   margin:116px 0 0 0;
 
+  @include bp-small {
+    margin:0;
+  }
+
   .page_content {
     margin:2em auto;
 
@@ -1386,9 +1414,14 @@ main {
 
   img {
 
+    @include bp-small {
+      width:100%;
+      height:auto;
+    }
+
     &:hover {
-      opacity:0.8;
       @include transition(opacity 800ms ease);
+      opacity:0.8;
     }
   }
 
@@ -1401,8 +1434,8 @@ main {
     }
 
     .menu, ul {
-      display:block;
       @include ul-list-style-no-type;
+      display:block;
 
       li {
         border-bottom:1px solid #ccc;
@@ -1573,10 +1606,11 @@ footer {
       width:40%;
 
       @include bp-small {
-        width:71%;
+        width:80%;
         float:none;
         margin:0 auto 1em 0;
         display:block;
+        text-align:center;
       }
     }
 
