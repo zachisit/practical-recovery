@@ -295,8 +295,8 @@ header {
     margin:2em 0 0 0;
 
     @include bp-small {
-      float:none;
-      margin:auto;
+      float:left;
+      margin:1em 0 1em 1em;
       width:61%;
     }
   }
@@ -309,6 +309,7 @@ header {
     @include bp-small {
       width:100%;
       display:block;
+      margin:0;
     }
 
     #call_us {
@@ -325,8 +326,8 @@ header {
         margin:1.5em 0 0 0;
 
         @include bp-small {
-          margin:0 0 0 1em;
-          text-align:left;
+          margin:0;
+          text-align:center;
         }
 
         a {
@@ -368,8 +369,9 @@ header {
         margin:1.2em 0 0 0;
 
         @include bp-small {
-          margin:0.5em auto 0 auto;
-          width:80%
+          margin:auto;
+          width:162px;
+          height:20px;
         }
 
         li {
@@ -447,28 +449,20 @@ header {
 /*--------------------------------------------------------------
 # Menu - Desktop and Mobile
 --------------------------------------------------------------*/
-#search_mobile {
-    display:none;
-
-    @include bp-small {
-      display:block;
-    }
-  }
-
 #menu_close {
-    display:none;
-    float:right;
-    right:2%;
-    outline:none;
-    border:none;
-    background:none;
+  display:none;
+  float:right;
+  margin:2em 1em 0 0;
+  outline:none;
+  border:none;
+  background:none;
   
-    @include font-awesome-character(after, "\f057", 2.934em, null, $error_red, null);
+  @include font-awesome-character(after, "\f057", 2.934em, null, white, null);
 
-    @include bp-small {
-      display:block;
-    }
+  @include bp-small {
+    display:block;
   }
+}
 
 #menu_btn {
   background:none;
@@ -476,12 +470,12 @@ header {
   outline:none;
   display:none;
   margin:0;
-  top:4em;
+  top:1em;
   right:2%;
   border:none;
   position:absolute;
   
-  @include font-awesome-character(after, "\f0c9", 2.934em, null, $error_red, null) {
+  @include font-awesome-character(after, "\f0c9", 2.934em, null, $brand_color_blue, null) {
     float:left;  
   };
 
@@ -491,123 +485,141 @@ header {
 }
 
 #menu {
-    float:right;
-    width:auto;
-    clear:both;
-    margin:-1em 0 0 0;//@TODO:not most elegant;fix later
+  float:right;
+  width:auto;
+  clear:both;
+  margin:-1em 0 0 0;//@TODO:not most elegant;fix later
 
-    @include bp-small {
-      background:$error_red;
-      width:100%;
-      height:576px;
-      float:left;
-      position:absolute;
-      top:7%;
-      z-index:999;
-    }
+  @include bp-small {
+    background:$brand_color_blue;
+    width:100%;
+    float:left;
+    position:fixed;
+    top:0;
+    z-index:999;
+    bottom:0;
+    /*
+    @TODO:move this to tater, this is mobile responsive
+    sticking mobile menu to bottom of page
+     */
+  }
 
-    .menu {
+  .menu {
 
-      li {
-        display:inline-block;
-        margin:0 1em 0 0;
-        position:relative;
+    li {
+      display:inline-block;
+      margin:0 1em 0 0;
+      position:relative;
 
-        a {
-          font-size:1em;
-          text-transform:uppercase;
-          font-family:'Kreon', sans-serif;
+      @include bp-small {
+        width:100%;
+        text-align:center;
+        margin:0 0 1.5em 0;
+      }
+
+      a {
+        font-size:1em;
+        text-transform:uppercase;
+        font-family:'Kreon', sans-serif;
+        color:$brand_text_color;
+
+        @include bp-small {
+          color:white;
+        }
+
+        &::after {
+          content:'/';
           color:$brand_text_color;
+          margin:0 0 0 1em;
 
-          &::after {
-            content:'/';
-            color:$brand_text_color;
-            margin:0 0 0 1em;
-          }
-
-          &:hover {
-            color:$brand_color_blue;
-            @include transition(color 400ms ease);
+          @include bp-small {
+            display:none;
           }
         }
 
         &:hover {
-
-          &  > .sub-menu {
-            display:block;
-          }
-        }
-
-        &.current_page_item {
-
-          a {
-            color:$brand_color_blue;
-          }
-        }
-
-        &:last-child {
-          margin:0;
-          padding:0;
-
-          a {
-
-            &:after {
-              display:none;
-            }
-          }
+          @include transition(color 400ms ease);
+          color:$brand_color_blue;
         }
       }
 
-      .sub-menu {
-        display:none;
-        position:absolute;
-        background:$brand_color_blue;
-        border:1px solid #ccc;
+      &:hover {
+
+        &  > .sub-menu {
+          display:block;
+        }
+      }
+
+      &.current_page_item {
+
+        a {
+          color:$brand_color_blue;
+        }
+      }
+
+      &:last-child {
+        margin:0;
         padding:0;
-        width:200px;
-        z-index:2;
+
+        a {
+
+          &:after {
+            display:none;
+          }
+        }
+      }
+    }
+
+    .sub-menu {
+      display:none;
+      position:absolute;
+      background:$brand_color_blue;
+      border:1px solid #ccc;
+      padding:0;
+      width:200px;
+      z-index:2;
+
+      @include bp-small {
+        background:none;
+        position:relative;
+        border-top:1px solid #ccc;
+        border-bottom:1px solid #ccc;
+        width:100%;
+        margin:0.5em 0 0 0;
+        float:left;
+        padding:0.5em 0;
+      }
+
+      li {
+        display:block;
+        float:left;
+        padding:0.5em 0 0.5em 0.5em;
+        width:95%;
+        border-bottom:1px solid white;
 
         @include bp-small {
-          background:none;
-          position:relative;
-          border-top:1px solid #ccc;
-          border-bottom:1px solid #ccc;
           width:100%;
-          margin:0.5em 0 0 0;
-          float:left;
-          padding:0.5em 0;
+          border:none;
+          padding:0;
+          margin:0;
         }
 
-        li {
-          display:block;
-          float:left;
-          padding:0.5em 0 0.5em 0.5em;
-          width:95%;
-          border-bottom:1px solid white;
+        &:hover {
+          @include transition(background 1400ms ease);
+          background:$brand_color_green;
+        }
 
-          @include bp-small {
-            width:100%;
-            border:none;
-            padding:0;
-            margin:0;
-          }
+        a {
+          color:white;
 
-          &:hover {
-            background:$brand_color_green;
-            @include transition(background 1400ms ease);
-          }
-
-          a {
-            color:white;
-
-            &::after {
-              display:none;
-            }
+          &::after {
+            display:none;
           }
         }
       }
     }
   }
+}
 
 /*--------------------------------------------------------------
 # Home Page Specific
@@ -1198,6 +1210,11 @@ header {
   float:right;
   width:70%;
   margin:0 0 2em 0;
+
+  @include bp-small {
+    width:100%;
+    float:left;
+  }
 }
 
 #full_width {
@@ -1545,7 +1562,8 @@ video {
       margin:-4em 0 1.25em 0;
 
       @include bp-small {
-        right:1%;
+        right:2%;
+        margin:-11em 0 1.25em 0;
       }
 
       @include bp-medium {
@@ -1586,6 +1604,10 @@ footer {
     margin:-20px auto 0 auto;
     width:20px;
     background:url(../images/preload/footer-flower.jpg) no-repeat;
+
+    @include bp-small {
+      width:77px;
+    }
   }
 
   #top {
@@ -1608,7 +1630,7 @@ footer {
       @include bp-small {
         width:80%;
         float:none;
-        margin:0 auto 1em 0;
+        margin:0 auto 3em auto;
         display:block;
         text-align:center;
       }
@@ -1621,6 +1643,10 @@ footer {
       @include bp-small {
         width:100%;
         display:block;
+
+        h2 {
+          text-align:center;
+        }
       }
 
       #newsletter_signup {

@@ -61,9 +61,6 @@
         </div>
         <div id="menu">
             <button id="menu_close"></button>
-            <div id="search_mobile">
-                <?php get_search_form(); ?>
-            </div>
             <?php wp_nav_menu( [ 'theme_location' => 'header_menu', 'menu_id' => 'primary-menu' ] ); ?>
         </div>
     </div>
