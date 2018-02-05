@@ -9,9 +9,7 @@
 get_header(); ?>
 
 <main id="home">
-    <!--/wp-content/uploads/2017/12/home-parallax.jpg-->
-    <!--<div id="banner_image" style="background:url(https://images.unsplash.com/photo-1443981257024-40c63080b3ed?auto=format&fit=crop&w=2048&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D) no-repeat;background-attachment:fixed;">-->
-    <div id="banner_image" style="background:url(<?=get_template_directory_uri(); ?>/images/preload/home_splash_banner.jpg) no-repeat;background-attachment:fixed;">
+    <div id="banner_image">
         <div class="cta_block">
             <h1>
                 <span class="full_width">San Diego's Source For</span>
