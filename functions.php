@@ -231,7 +231,7 @@ function getPageFeaturedImageBanner() {
     if (empty($tub)) {
         return "<img src='"
             . get_template_directory_uri()
-            . "/images/preload/page_banner_placeholder.jpg' alt='"
+            . "/images/preload/page_banner_placeholder.png' alt='"
             . get_the_title()
             . "' />";
     } else {
