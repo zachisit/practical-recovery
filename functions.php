@@ -73,7 +73,6 @@ function theme_scripts()
     wp_enqueue_script( 'pdf_css_icon_add', get_template_directory_uri() . '/js/pdf_css_icon_add.js', time() );
     wp_enqueue_script( 'slick_carousel_js', 'https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js', [], time(), true );
     wp_enqueue_script( 'slick_carousel_declaractions_js', get_template_directory_uri() . '/js/slick_slider_homepage.js', [], time() );
-    //wp_enqueue_script( 'fixed_header', get_template_directory_uri() . '/js/fixed_header.js', [], time() );
     wp_enqueue_script( 'homepage_fb_reviews', get_template_directory_uri() . '/js/home_facebook_reviews_view_more.js', [], time() );
 
     //localized
