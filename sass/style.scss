@@ -1480,6 +1480,14 @@ main {
             @include transition(color 500ms ease);
           }
         }
+
+        &.current_page_item {
+
+          a {
+            color:$brand_color_blue;
+            font-weight:900;
+          }
+        }
       }
     }
   }
