@@ -1315,6 +1315,7 @@ header {
         font-style:italic;
         margin:0;
         padding:0;
+        min-height:50px;
       }
 
       &:nth-child(3n) {
@@ -1397,6 +1398,7 @@ main {
     margin:2em auto;
 
   }
+
   #page_content {
     margin:2em auto;
     width:80%;
@@ -1416,6 +1418,10 @@ main {
       text-transform:uppercase;
       margin:0 0 0.5em 0;
     }
+  }
+
+  &#no_page_banner {
+    margin:160px 0 0 0;
   }
 }
 

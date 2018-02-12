@@ -62,6 +62,6 @@ function callOnResize() {
  can actually see the dropdown links
  in mobile only
  */
-jQuery(function($) {
-    $(".menu-item-has-children").children("a").attr('href', "javascript:void(0)");
-});
+// jQuery(function($) {
+//     $(".menu-item-has-children").children("a").attr('href', "javascript:void(0)");
+// });

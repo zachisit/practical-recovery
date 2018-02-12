@@ -22,10 +22,16 @@
  * While respecting that a theme does not need a list of poorly written plugins that complete functionality that a compentant developer can write from scratch, this theme has chosen certain plugins that extend or compliment the overall architecture of the theme itself. A list of those plugins are in the section [Theme Plugins](#theme-plugins) - if any of these plugins are not installed then an error will print in the admin screen alerting user to complete installation
 
 ## Theme Custom Post Types
-* @TODO
+* Testimonials
+* Team Members
+* PR Blog
 
 ## Theme Shortcodes
-* @TODO
+* Blog shows all blog articles via the Blog landing page via `[show_blog_posts]` taken from the PR Blog Custom Post Type
+* Basic SiteMap, listing all Pages, shows via `[sitemap]`
+
+## Theme Notes
+* Per each Page, if user does not upload a Featured Image then it loads the fallback image, per `getPageFeaturedImageBanner` method.
 
 ## Theme Fonts
 * To save server space and user load time, we use Google Fonts. The following are the client approved fonts this theme relies on. Fallback font will be sans-serif.
