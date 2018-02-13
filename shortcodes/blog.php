@@ -8,8 +8,8 @@ function pr_output_blog() {
         'post_type' => 'prblog',
         'post_status' => 'publish',
         'posts_per_page' => -1,
-        'orderby' => 'title',
-        'order' => 'ASC'
+        'orderby' => 'date',
+        'order' => 'DESC'
     ];
 
     $query = new WP_Query( $args );

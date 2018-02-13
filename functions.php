@@ -305,7 +305,7 @@ function get_page_content($page) {
 /**
  * Get Latest Post
  *
- * pipe in category_lsug and how many posts
+ * pipe in category_slug and how many posts
  * to return basic wp_query
  *
  * @param $category_slug
@@ -338,3 +338,49 @@ function get_latest_post($category_slug, $return_number, $title = false, $excerp
         endif;
         wp_reset_postdata();
 }
+
+/**
+ * Get Latest Blog Post
+ *
+ * return latest PR Blog CPT Post
+ *
+ * @param $return_number
+ * @param bool $title
+ * @param bool $excerpt
+ * @param bool $readmore
+ * @param bool $date
+ */
+function get_latest_blog_post($return_number, $title = false, $excerpt = false, $readmore = false, $date = false) {
+    $args = [
+        'post_type' => 'prblog',
+        'post_status' => 'publish',
+        'posts_per_page' => $return_number,
+        'order' => 'DESC',
+        'orderby' => 'date'
+    ];
+
+    $the_query = new WP_Query( $args );
+
+    if ( $the_query->have_posts() ) :
+        while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+            <?php if ($title) : ?><h3 class="title"><?=the_title()?></h3><?php endif; ?>
+            <?php if ($date) : ?><div class="date"><?=the_date()?></div><?php endif; ?>
+            <?=getFeaturedImage() ?>
+            <?php if ($excerpt) : ?><div class="excerpt"><?=the_excerpt()?></div><?php endif; ?>
+            <?php if ($readmore) : ?><div class="readmore"><a class="large_button" href="<?=the_permalink()?>" title="<?=the_title(); ?>">read more</a></div><?php endif; ?>
+            <?php
+        endwhile;
+    endif;
+    wp_reset_postdata();
+}
+
+/**
+ * Filter the except length to 20 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function wpdocs_custom_excerpt_length( $length ) {
+    return 45;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );

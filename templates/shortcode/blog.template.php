@@ -13,7 +13,7 @@ if(isset($posts) && !empty($posts)):?>
             </div>
             <div class="content">
                 <h3><a href="<?=get_post_permalink($post) ?>" title="<?=$post->post_title?>"><?=$post->post_title?></a></h3>
-                <div class="date_posted">Posted on <?=$post->post_date?></div>
+                <div class="date_posted">Posted on <?=date('F j, Y', strtotime($post->post_date))?></div>
                 <div class="article">
                     <?=mb_strimwidth(wp_strip_all_tags($post->post_content), 0, 800, '...');?>
                 </div>

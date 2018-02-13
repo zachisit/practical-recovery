@@ -1165,6 +1165,48 @@ header {
     text-transform:uppercase;
     font-family:'Kreon', sans-serif;
   }
+
+  .cta {
+    @include transition(800ms all ease);
+    @include border-radius(50%);
+    position:absolute;
+    top:4em;
+    right:4%;
+    background:$brand_color_green;
+    border:0.10em solid white;
+    text-align:center;
+    color:white;
+    padding:0.50em;
+    height:151px;
+    box-shadow:1px 1px #333;
+
+    h2 {
+      margin:1em 0 0.4em 0;
+      padding:0;
+      font-style:italic;
+      font-weight:300;
+    }
+
+    p {
+      margin:0;
+      padding:0;
+
+      a {
+        font-weight:400;
+        text-decoration:none;
+        color:white;
+      }
+    }
+
+    @include bp-small {
+      display:none;
+    }
+
+    &:hover {
+      @include transition(800ms all ease);
+      background:$brand_color_blue;
+    }
+  }
 }
 
 #content_left {
