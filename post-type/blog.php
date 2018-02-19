@@ -25,6 +25,7 @@ function pr_blog_posttype() {
             'menu_icon' => 'dashicons-archive',
             'media_buttons' => false,
             'show_in_nav_menus' => false,
+            'has_archive' => true
         ]
     );
 }
