@@ -2,7 +2,10 @@
 /**
  * Output Team Member
  * based on taxonomy piped in
+ *
+ * @package practical-recovery
  */
+
 function pr_team_members_by_tax($atts) {
     //TODO:default to all if no cat piped in
     extract(shortcode_atts(

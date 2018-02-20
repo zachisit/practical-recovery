@@ -2,7 +2,10 @@
 /**
  * Learn About Addiction
  * shows Posts for 'Learn About Addiction' page
+ *
+ * @package practical-recovery
  */
+
 function pr_output_learn_about_addiction() {
     $args = [
         'post_type' => 'post',

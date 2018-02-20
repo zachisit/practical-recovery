@@ -9,6 +9,7 @@ require_once "shortcodes/sitemap.php";
 require_once "shortcodes/team_member_list.php";
 require_once "shortcodes/blog.php";
 require_once "shortcodes/learn_about_addiction.php";
+require_once "shortcodes/blog_category_list.php";
 require_once "post-type/testimonials.php";
 require_once "post-type/team.php";
 require_once "post-type/blog.php";

@@ -1,7 +1,10 @@
 <?php
 /**
  * Output all Testimonials
+ *
+ * @package practical-recovery
  */
+
 function pr_all_testimonials() {
     $args = [
         'post_type' => 'testimonials',

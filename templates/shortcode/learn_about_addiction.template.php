@@ -2,11 +2,14 @@
 /**
  * Template for Learn About Adddiction Output
  * showing all posts with category 'addiction'
+ *
+ * @var $posts
+ * @package practical-recovery
  */
+
 if(isset($posts) && !empty($posts)):?>
     <ul class="blog_list">
-        <?php foreach($posts as $post):
-            //var_dump($post)?>
+        <?php foreach($posts as $post): ?>
             <li>
                 <div class="content">
                     <h3><a href="<?=get_post_permalink($post) ?>" title="<?=$post->post_title?>"><?=$post->post_title?></a></h3>

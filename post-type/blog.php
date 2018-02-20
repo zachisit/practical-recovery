@@ -1,7 +1,10 @@
 <?php
 /**
  * Blog Custom Post Type
+ *
+ * @package practical-recovery
  */
+
 function pr_blog_posttype() {
     register_post_type( 'prblog',
         [
