@@ -8,6 +8,7 @@ get_header();
 $showSide = get_post_meta( get_the_ID(), '_show_sidebar', true );
 ?>
     <main>
+        <?php pageBannerImage() ?>
         <div class="wrapper">
             <?php if ($showSide) { get_sidebar(); } ?>
             <div id="<?=($showSide) ? 'content_right' : 'full_width' ?>" class="content_text">

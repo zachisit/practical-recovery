@@ -4,7 +4,7 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
-    <title><?php if ( !is_front_page() ) { wp_title( '|', true, 'right' ); } bloginfo( 'name' ); ?></title>
+    <title><?php if ( is_front_page() ) { echo 'Drug Rehab & Alcohol Treatment | San Diego | Non 12 Step'; } else { wp_title(); } ?></title>
 
     <!-- Apple Touch Icon -->
     <link rel="apple-touch-icon" href="images/preload/apple-touch-icon.png"><!--//TODO:provide-->
