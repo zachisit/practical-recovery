@@ -60,7 +60,7 @@ function theme_scripts()
     wp_enqueue_script('jquery');
 
     //css
-    wp_enqueue_style( 'theme-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'theme-style', get_stylesheet_uri(), time() );
     wp_enqueue_style( 'google_font_kreon', 'https://fonts.googleapis.com/css?family=Kreon:300,400,700');
     wp_enqueue_style( 'slick_carousel_css', 'https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css');
     wp_enqueue_style( 'slick_css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css' );

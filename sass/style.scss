@@ -1316,7 +1316,7 @@ header {
     }
   }
 
-  .staff_list {
+  .team_members { //test
     list-style-type:none;
 
     a {
@@ -1327,6 +1327,7 @@ header {
       display:inline-block;
       margin:0 1em 0 0;
       width:32%;
+      vertical-align:top;
       @include image_responsive;
 
       @include bp-small {
@@ -1348,6 +1349,7 @@ header {
         margin:0 0 0.4em 0;
         padding:0;
         color:#4ea0d4;
+        height:90px;
       }
 
       h3 {
