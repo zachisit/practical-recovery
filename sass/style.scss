@@ -171,6 +171,10 @@ a {
     display:block;
   }
 
+  @media only screen and (min-width:500px) and (max-width:1290px) {
+    width:90%;
+  }
+
   &.small {
     max-width:600px;
 
