@@ -19,7 +19,7 @@ function pr_team_members_by_tax($atts) {
         'post_type' => 'team_member',
         'post_status' => 'publish',
         'posts_per_page' => -1,
-        'orderby' => 'title',
+        'orderby' => 'menu_order',
         'order' => 'ASC',
         'tax_query' => [
             'relation' => 'AND',
