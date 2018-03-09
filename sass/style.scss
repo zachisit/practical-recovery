@@ -135,7 +135,6 @@ $pinterest_brand_color:#bd081c;
   }
 }
 
-
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -171,7 +170,7 @@ a {
     display:block;
   }
 
-  @media only screen and (min-width:500px) and (max-width:1290px) {
+  @media only screen and (min-width:500px) and (max-width:1333px) {
     width:90%;
   }
 
@@ -492,7 +491,7 @@ header {
   float:right;
   width:auto;
   clear:both;
-  margin:-1em 0 0 0;//@TODO:not most elegant;fix later
+  margin:-1em 0 0 0;
 
   @include bp-small {
     background:$brand_color_blue;
@@ -699,12 +698,16 @@ header {
     margin:4em 0 3em 0;
 
     #latest_post {
+      @include border-radius(0.4em);
       float:left;
       width:49%;
       background:$brand_color_blue;
       color:white;
       min-height:470px;
-      @include border-radius(0.4em);
+
+      @media only screen and (min-width:700px) and (max-width:1018px) {
+          width:100%;
+      }
 
       @include bp-small {
         width:100%;
@@ -766,16 +769,20 @@ header {
       float:right;
       width:49%;
 
-      @include bp-small {
+      @media only screen and (min-width:700px) and (max-width:1018px) {
+        //#read_what {
+          width:100%;
+        //}
+      }
+
+      img {
         width:100%;
-        float:left;
+        height:auto;
       }
 
       @include bp-small {
-        img {
-          width:100%;
-          height:auto;
-        }
+        width:100%;
+        float:left;
       }
 
       h2 {
@@ -1486,11 +1493,8 @@ main {
   }
 
   img {
-
-    @include bp-small {
-      width:100%;
-      height:auto;
-    }
+    width:100%;
+    height:auto;
 
     &:hover {
       @include transition(opacity 800ms ease);

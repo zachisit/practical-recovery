@@ -60,7 +60,7 @@ a {
     .wrapper {
       width: 100%;
       display: block; } }
-  @media only screen and (min-width: 500px) and (max-width: 1290px) {
+  @media only screen and (min-width: 500px) and (max-width: 1333px) {
     .wrapper {
       width: 90%; } }
   .wrapper.small {
@@ -494,14 +494,17 @@ header {
   position: relative;
   margin: 4em 0 3em 0; }
   #home #latest_post_read_what #latest_post {
+    -webkit-border-radius: 0.4em;
+    -moz-border-radius: 0.4em;
+    border-radius: 0.4em;
     float: left;
     width: 49%;
     background: #4ea0d4;
     color: white;
-    min-height: 470px;
-    -webkit-border-radius: 0.4em;
-    -moz-border-radius: 0.4em;
-    border-radius: 0.4em; }
+    min-height: 470px; }
+    @media only screen and (min-width: 700px) and (max-width: 1018px) {
+      #home #latest_post_read_what #latest_post {
+        width: 100%; } }
     @media only screen and (max-width: 30em) {
       #home #latest_post_read_what #latest_post {
         width: 100%; } }
@@ -547,14 +550,16 @@ header {
   #home #latest_post_read_what #read_what {
     float: right;
     width: 49%; }
+    @media only screen and (min-width: 700px) and (max-width: 1018px) {
+      #home #latest_post_read_what #read_what {
+        width: 100%; } }
+    #home #latest_post_read_what #read_what img {
+      width: 100%;
+      height: auto; }
     @media only screen and (max-width: 30em) {
       #home #latest_post_read_what #read_what {
         width: 100%;
         float: left; } }
-    @media only screen and (max-width: 30em) {
-      #home #latest_post_read_what #read_what img {
-        width: 100%;
-        height: auto; } }
     #home #latest_post_read_what #read_what h2 {
       color: #71a600;
       font-size: 2em;
@@ -1079,17 +1084,16 @@ main {
     #sidebar {
       width: 100%;
       display: block; } }
-  @media only screen and (max-width: 30em) {
-    #sidebar img {
-      width: 100%;
-      height: auto; } }
-  #sidebar img:hover {
-    -webkit-transition: opacity 800ms ease;
-    -moz-transition: opacity 800ms ease;
-    -ms-transition: opacity 800ms ease;
-    -o-transition: opacity 800ms ease;
-    transition: opacity 800ms ease;
-    opacity: 0.8; }
+  #sidebar img {
+    width: 100%;
+    height: auto; }
+    #sidebar img:hover {
+      -webkit-transition: opacity 800ms ease;
+      -moz-transition: opacity 800ms ease;
+      -ms-transition: opacity 800ms ease;
+      -o-transition: opacity 800ms ease;
+      transition: opacity 800ms ease;
+      opacity: 0.8; }
   #sidebar .widgetblock {
     margin: 0 0 4em 0;
     display: block; }
