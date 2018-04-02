@@ -41,6 +41,7 @@
 * Theme utilizing preloading of any files placed inside the theme/images/preload directory. Refer to file documentation on safe-use.
 
 ## Theme Plugins
+Removing any of these plugins will break the theme and essentially ruin your day:
 * [WP-SCSS](https://wordpress.org/plugins/wp-scss/) - allows server compiling of SASS file
 * [Facebook Reviews](https://wordpress.org/plugins/fb-reviews-widget/) - for powering the homepage review block
 * [PHP Code Widget](https://wordpress.org/plugins/php-code-widget/) - show blog categories menu on Internal Sidebar for Pages 'PR Blog', 'Blog', and 'All taxonomy pages'
