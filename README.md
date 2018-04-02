@@ -46,7 +46,6 @@ Removing any of these plugins will break the theme and essentially ruin your day
 * [Facebook Reviews](https://wordpress.org/plugins/fb-reviews-widget/) - for powering the homepage review block
 * [PHP Code Widget](https://wordpress.org/plugins/php-code-widget/) - show blog categories menu on Internal Sidebar for Pages 'PR Blog', 'Blog', and 'All taxonomy pages'
 * [Gravity Forms](http://www.gravityforms.com/) - general contact form and any form submission logic that is not MailChimp related
-* TODO
 
 ## WordPress Version
 * At time of last update, this theme was built and tested with WordPress version 4.9
