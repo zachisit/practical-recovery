@@ -41,8 +41,10 @@
 * Theme utilizing preloading of any files placed inside the theme/images/preload directory. Refer to file documentation on safe-use.
 
 ## Theme Plugins
-* [WP-SCSS](https://wordpress.org/plugins/wp-scss/) - allows server compiling of SASS file.
+* [WP-SCSS](https://wordpress.org/plugins/wp-scss/) - allows server compiling of SASS file
 * [Facebook Reviews](https://wordpress.org/plugins/fb-reviews-widget/) - for powering the homepage review block
+* [PHP Code Widget](https://wordpress.org/plugins/php-code-widget/) - show blog categories menu on Internal Sidebar for Pages 'PR Blog', 'Blog', and 'All taxonomy pages'
+* [Gravity Forms](http://www.gravityforms.com/) - general contact form and any form submission logic that is not MailChimp related
 * TODO
 
 ## WordPress Version
