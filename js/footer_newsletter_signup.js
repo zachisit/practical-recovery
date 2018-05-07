@@ -9,9 +9,9 @@
  *
  */
 jQuery(document).ready(function($) {
-    var newsletterSignupButton = document.getElementById('footer_newsletter_signup_button');
-
-    newsletterSignupButton.addEventListener('click',function(){
-        tb_show("Newsletter Signup", '#TB_inline?height=500&amp;width=400&amp;inlineId=footer_newsletter_signup_popup');
+    document.addEventListener('click',function(e){
+        if (e.target.classList.contains('newsletter_signup_button')) {
+            tb_show("Newsletter Signup", '#TB_inline?height=500&amp;width=400&amp;inlineId=footer_newsletter_signup_popup');
+        }
     });
 });

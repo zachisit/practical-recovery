@@ -25,6 +25,8 @@ get_header(); ?>
             </div>
             <div id="sidebar" class="sidebar_right">
                 <a href="https://fast.wistia.net/embed/iframe/w78666dkc1?popover=true?TB_iframe=true" class="thickbox"><img src="<?=get_template_directory_uri(); ?>/images/preload/My-addiction-recovery-story.jpg" alt="<?=get_bloginfo( 'name' )?> - Home" /></a>
+
+                <?=do_shortcode('[mailchimp_signup]')?>
             </div>
         </div>
         <div id="latest_post_read_what">
